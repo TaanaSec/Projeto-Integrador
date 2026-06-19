@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre-se</title>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../icon/logo-emporio.ico" type="image/ico">
+    <link rel="stylesheet" href="../CSS/cadastro/cadastro.css">
+</head>
+<body>
+
+    <header class="cabecalho">
+        <div class="topo">
+            <a href="../home.html"><img src="../img/logo emporio.png" alt="Emporio"></a>
+            <div class="busca">
+                <input type="text" placeholder="Buscar...">
+            </div>
+            <div class="acoes">
+                <a href="../localizacao.html"><img src="../img/Localizacao.png" alt="Localizacao">Encontre Nossas Lojas</a>
+                <a href="../login/login.html"><img src="../img/Login.png" alt="Login">Entre ou Cadastre-se</a>
+                <a href="../carrinho.html"><img src="../img/Carrinho.png" alt="Carrinho">Meu Carrinho</a>
+            </div>
+        </div>
+
+        <nav class="menu">
+            <ul>
+                °
+                <li><a href="../geleias.html">Geleias</a></li>
+                <li><a href="../sucos.html">Sucos</a></li>
+                <li><a href="../queijos.html">Queijos</a></li>
+                <li><a href="../paes.html">Pães</a></li>
+                <li><a href="../vinhos.html">Vinhos</a></li>
+                <li><a href="../destilados.html">Destilados</a></li>
+                <li><a href="../conservas.html">Conservas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container-cadastro">
+        <section class="cadastro-box">
+            <h1>Crie sua conta</h1>
+            <p>Informe seu e-mail e nome completo para criar sua conta!</p>
+
+            <!-- id="formCadastro" é obrigatório para o JS encontrar o formulário -->
+            <!-- Sem action e sem method, pois o JS controla tudo via preventDefault() -->
+            <form id="formCadastro" class="form-box">
+
+                <div class="campo">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo">
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail">
+                </div>
+
+                <div class="campo">
+                    <label for="senha">Crie sua senha</label>
+                    <input type="password" id="senha" name="senha" placeholder="Mínimo 6 caracteres, 1 maiúscula e 1 número">
+                </div>
+
+                <!-- Campo exigido pelo JS: senha !== confirmarSenha bloqueia o cadastro -->
+                <div class="campo">
+                    <label for="confirmarSenha">Confirme sua senha</label>
+                    <input type="password" id="confirmarSenha" name="confirmarSenha" placeholder="Repita a senha">
+                </div>
+
+                <!-- Div onde o JS injeta mensagens de erro ou sucesso via mostrarMensagem() -->
+                <div id="mensagem" class="mensagem" role="alert" aria-live="polite"></div>
+
+                <!-- Botão dentro do form com type="submit" para disparar o evento do JS -->
+                <button type="submit" class="btn-cadastrar">Cadastrar</button>
+
+            </form>
+
+            <div class="divisor">
+                <span>ou</span>
+            </div>
+
+            <div class="login-link">
+                <p>Já tem uma conta? <a href="../login/login.html">Entrar aqui</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>&copy; 2024 Empório Gourmet - Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Script no final do body para garantir que o DOM já está carregado -->
+    <script src="../JS/cadastro/cadastro.js"></script>
+</body>
+</html>

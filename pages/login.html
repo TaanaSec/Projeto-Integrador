@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𝐋𝐨𝐠𝐢𝐧</title>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="icon" href="icon/logo-emporio.ico" type="image/ico">
+    <link rel="stylesheet" href="../CSS/login/login.css">
+</head>
+<body>
+
+    <header class="cabecalho">
+        <div class="topo">
+            <a href="home.html"><img src="img/logo emporio.png" alt="Emporio"></a>
+            <div class="busca">
+                <input type="text" placeholder="Buscar...">
+            </div>
+            <div class="acoes">
+                <a href="localizacao.html"><img src="img/Localizacao.png" alt="Localizacao">Encontre Nossas Lojas</a>
+                <a href="login.html"><img src="img/Login.png" alt="Login">Entre ou Cadastre-se</a>
+                <a href="carrinho.html"><img src="img/Carrinho.png" alt="Carrinho">Meu Carrinho</a>
+            </div>
+        </div>
+
+        <nav class="menu">
+            <ul>
+                °
+                <li><a href="geleias.html">Geleias</a></li>
+                <li><a href="sucos.html">Sucos</a></li>
+                <li><a href="queijos.html">Queijos</a></li>
+                <li><a href="paes.html">Pães</a></li>
+                <li><a href="vinhos.html">Vinhos</a></li>
+                <li><a href="destilados.html">Destilados</a></li>
+                <li><a href="conservas.html">Conservas</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="container-login">
+        <section class="login-box">
+            <h1>Acesse sua conta</h1>
+            <p>Informe seu e-mail e senha para continuar.</p>
+
+            <form action="processar_login.php" method="POST">
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                </div>
+
+                <div class="campo">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" placeholder="Sua senha" required>
+                </div>
+
+                <div class="opcoes-login">
+                    <label><input type="checkbox"> Lembrar de mim</label>
+                    <a href="recuperar-senha.html">Esqueceu a senha?</a>
+                </div>
+
+                <button type="submit" class="btn-entrar">Entrar</button>
+            </form>
+
+            <div class="divisor">
+                <span>ou</span>
+            </div>
+
+            <div class="cadastro-link">
+                <p>Ainda não tem conta? <a href="cadastro.html">Cadastre-se aqui</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>&copy; 2024 Empório Gourmet - Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="../JS/login/login.js"></script>
+
+</body>
+</html>
