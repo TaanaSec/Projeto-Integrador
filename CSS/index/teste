@@ -1,0 +1,89 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container do menu */
+.menu-container {
+  position: relative;
+}
+
+/* Botão hambúrguer */
+.hamburger {
+  width: 30px;
+  height: 22px;
+  display: none; /* escondido no desktop */
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 1001;
+}
+
+.hamburger span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: #333;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Menu padrão (desktop) */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 15px;
+  background-color: #fff;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+/* --- MOBILE --- */
+@media (max-width: 768px) {
+
+  /* mostra botão hambúrguer */
+  .hamburger {
+    display: flex;
+  }
+
+  /* menu escondido inicialmente */
+  .menu {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: #fff;
+    display: none;
+    padding: 20px;
+    gap: 15px;
+    border-top: 1px solid #ccc;
+  }
+
+  /* menu ativo */
+  .menu.active {
+    display: flex;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
