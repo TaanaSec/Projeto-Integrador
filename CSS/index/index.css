@@ -1,0 +1,627 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: normal;
+  background-color: #f9f4f0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: #7c6e52;
+  overflow-x: hidden;
+}
+
+.header-nav-actions {
+  width: 100%;
+  background-color: #f9f4f0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.fundo-header {
+  width: 100%;
+  padding: 16px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.logo-emporio-dois-finalmente-1 {
+  width: 100px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.barra-de-pesquisa {
+  flex: 1;
+  max-width: 600px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: rgba(195, 195, 195, 0.97);
+  min-width: 200px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-shrink: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #000;
+}
+
+.boto-localizao,
+.boto-login {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.location-1-icon,
+.login-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.nav {
+  width: 100%;
+  background-color: #f9f4f0;
+  border-top: 1px solid rgba(0,0,0,0.12);
+  border-bottom: 1px solid rgba(0,0,0,0.12);
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  overflow-x: auto;
+  height: 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: #7c6e52;
+}
+
+.nav::-webkit-scrollbar { display: none; }
+
+.menu-amborgue-icon {
+  width: 18px;
+  height: 14px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.todas-categorias {
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color 0.2s;
+  display: block;
+  width: fit-content;
+  margin: 0 auto; 
+}
+
+.todas-categorias:hover { color: #a50000; }
+
+/* Slider */
+
+.slider-section {
+  width: 100%;
+  min-height: 600px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background-color: #1a0000;
+}
+
+.slider-icon {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.55;
+}
+
+.slider-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.slider-text {
+  flex: 1;
+  color: #fff;
+  text-align: center;
+}
+
+.frete {
+  font-size: clamp(48px, 7vw, 96px);
+  font-family: 'Bebas Neue', sans-serif;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.ofertas {
+  font-size: clamp(18px, 2.5vw, 32px);
+  font-weight: 500;
+  color: #e5e5e5;
+  margin-bottom: 40px;
+}
+
+.btn-explorar {
+  display: inline-block;
+  background-color: #a50000;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(14px, 1.5vw, 20px);
+  padding: 18px 48px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s, transform 0.1s;
+}
+.btn-explorar:hover { background-color: #8b0000; transform: translateY(-2px); }
+
+.slider-images {
+  flex-shrink: 0;
+  position: relative;
+  width: clamp(280px, 35vw, 500px);
+  height: clamp(280px, 35vw, 500px);
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .hero-images { display: block; }
+}
+
+.slider-images img {
+  position: absolute;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.queijo-na-tabua-1 { width: 65%; height: 65%; bottom: 0; left: 0; }
+.salame-1-icon     { width: 55%; height: 55%; top: 0; right: 0; border-radius: 50%; }
+.licor-1-icon      { width: 35%; height: 60%; top: 15%; left: 30%; box-shadow: 0 4px 12px rgba(0,0,0,0.35); }
+.vinho-bonito-1    { width: 28%; height: 55%; bottom: 5%; right: 5%; }
+.goiabada-1-icon   { width: 40%; height: 40%; top: 0; left: 0; border-radius: 50%; }
+
+.categories-slider {
+  width: 100%;
+  padding: 40px 20px;
+  overflow-x: auto;
+}
+.categories-slider::-webkit-scrollbar { display: none; }
+
+.categories-inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: clamp(16px, 3vw, 48px);
+  min-width: max-content;
+  margin: 0 auto;
+}
+
+.category-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.category-circle {
+  width: clamp(80px, 10vw, 150px);
+  height: clamp(80px, 10vw, 150px);
+  border-radius: 50%;
+  background-color: #f9f4f0;
+  border: 1px solid #7c6e52;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.category-circle:hover {
+  border-color: #a50000;
+  box-shadow: 0 4px 12px rgba(165,0,0,0.15);
+}
+
+.category-circle img {
+  width: 55%;
+  height: 55%;
+  object-fit: contain;
+}
+
+.category-label {
+  font-size: clamp(10px, 1.2vw, 16px);
+  font-weight: 700;
+  text-align: center;
+  color: #7c6e52;
+  white-space: nowrap;
+}
+
+.frete-banner {
+  width: calc(100% - 80px);
+  max-width: 1200px;
+  margin: 0 auto 48px;
+  border-radius: 8px;
+  background-color: #a50000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  gap: 20px;
+}
+
+.frete-container {
+  color: #fff;
+  font-size: clamp(16px, 2.5vw, 32px);
+  flex: 1;
+}
+
+.frete-container b { font-weight: 700; }
+.consulte-seu-cep { font-weight: 500; }
+
+.carrinho-de-frete {
+  width: clamp(60px, 8vw, 120px);
+  height: clamp(60px, 8vw, 120px);
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.destaques-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px 60px;
+}
+
+.destaques-text {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.destaques {
+  display: block;
+  font-size: clamp(36px, 5vw, 64px);
+  color: #230000;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.destaques-underline {
+  display: inline-block;
+  border-top: 8px solid #000;
+  width: 350px;
+  max-width: 80%;
+  margin-top: 8px;
+}
+
+.item-1-parent {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.item-1 {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 4px 1px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 20px 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: #000;
+  transition: transform 0.2s, box-shadow 0.2s;
+  min-height: 380px;
+}
+.item-1:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.item-img-wrapper {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.vinho-01-icon {
+  height: 180px;
+  width: auto;
+  object-fit: contain;
+}
+
+.item-info {
+  flex: 1;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.item-name {
+  display: block;
+  font-size: 15px;
+  color: #000;
+  margin-bottom: 4px;
+}
+
+.item-price {
+  color: rgba(173, 37, 37, 0.94);
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.btn-comprar {
+  width: 100%;
+  background-color: #5d0000;
+  color: #fff;
+  font-family: 'Magra', sans-serif;
+  font-size: 15px;
+  text-align: center;
+  padding: 14px;
+  border-radius: 7px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s;
+}
+.btn-comprar:hover { background-color: #3d0000; }
+
+.boto-ver-todos-wrapper {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.btn-ver-todos {
+  display: inline-block;
+  background-color: #270000;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 18px 48px;
+  border-radius: 7px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s;
+}
+.btn-ver-todos:hover { background-color: #3d0000; }
+
+.image-parent {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto 60px;
+  padding: 0 40px;
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+}
+.image-parent::-webkit-scrollbar { display: none; }
+
+.image-parent img {
+  flex-shrink: 0;
+  width: clamp(280px, 33%, 500px);
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Footer */
+
+.marcas {
+  width: 100%;
+  background-color: #d9d9d9;
+  padding: 60px 40px 40px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: rgba(0,0,0,0.61);
+}
+
+.footer-top {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.logo-emporio-dois-finalmente-2 {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+}
+
+.footer-col h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 12px;
+}
+
+.footer-col p,
+.footer-col a {
+  font-size: 13px;
+  font-weight: 300;
+  color: #505050;
+  display: block;
+  line-height: 1.8;
+  text-decoration: none;
+}
+
+.footer-social {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.footer-social img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 300;
+  color: #505050;
+}
+
+.footer-contact-item img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.footer-payments h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 12px;
+}
+
+.payment-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.payment-logos img {
+  height: 30px;
+  width: auto;
+  object-fit: contain;
+}
+
+.seal-logos {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.seal-logos img {
+  height: 35px;
+  width: auto;
+  object-fit: contain;
+}
+
+.footer-divider {
+  border-top: 2px solid rgba(161,161,161,0.26);
+  margin: 20px 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 300;
+  color: rgba(0,0,0,0.61);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-slider-icon {
+  display: block;
+  max-width: 200px;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto 16px;
+}
+
+@media (max-width: 768px) {
+  .fundo-header {
+    padding: 12px 16px;
+    gap: 12px;
+  }
+
+  .barra-de-pesquisa {
+    order: 3;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .header-actions {
+    gap: 16px;
+    font-size: 12px;
+  }
+
+  .nav {
+    padding: 0 16px;
+    gap: 6px;
+  }
+
+  .hero-content {
+    padding: 40px 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .frete-banner {
+    width: calc(100% - 32px);
+    padding: 16px 20px;
+    margin: 0 auto 32px;
+  }
+
+  .destaques-section {
+    padding: 0 16px 40px;
+  }
+
+  .item-1-parent {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .image-parent {
+    padding: 0 16px;
+  }
+
+  .marcas {
+    padding: 40px 16px 24px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .item-1-parent {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
