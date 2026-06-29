@@ -1,251 +1,325 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Empório - La Tavola</title>
 
-  <link rel="stylesheet" href="../CSS/index/index.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Magra:wght@400;700&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" />
+  <link rel="icon" href="icon/logo-emporio.ico" type="image/ico">
+  <link rel="stylesheet" href="CSS/index/index.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Magra:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap">
 </head>
 
-<body>
 
+<body>   <!--________________________________________________ COMEÇO DO BODY ________________________________________________ -->
 
+    <header class="site-header" style="position:relative;">
+    <div class="header-container">
+      <a href="index.html" aria-label="Página inicial">
+        <img class="header-logo" src="img/logo-emporio.png" alt="Logo Empório La Tavola">
+      </a>
 
+      <input class="barra-pesquisa" type="search" placeholder="Buscar produtos...">
 
-
-  <header class="header-nav-actions">
-    <div class="fundo-header">
-      <img class="logo-emporio-dois-finalmente-1" src="../img/logo emporio.png" alt="Logo Empório La Tavola">
-
-      <div class="barra-de-pesquisa"></div>
-
-      <div class="header-actions">
-        <div class="boto-localizao">
-          <img class="location-1-icon" src="../img/ponteiro localizacao.png" alt="Localização">
+      <div class="header-acoes">
+        <a class="link-header" href="pages/localizacao.html">
+          <img class="icone-header" src="img/icone-localizacao.png" alt="Localização">
           <span>Nossas Lojas</span>
-        </div>
-        <div class="boto-login">
-          <img class="login-icon" src="../img/login.png" alt="Login">
+        </a>
+        <a class="link-header" href="pages/login.html">
+          <img class="icone-header" src="img/icone-login.png" alt="Login">
           <span>Login &amp; Cadastro</span>
-        </div>
+        </a>
       </div>
     </div>
 
 
 
+    <nav class="nav-principal" aria-label="Categorias"><!-- ----Barra de Navegação---- -->
 
-    <!-- Nav --------------------------------------------------------------->
+      <button class="btn-hamburguer" onclick="toggleMenu()" aria-label="Abrir menu"><!-- ----!!!!!!Fazer menu hamburguer!!!!!!---- -->
+        <span></span><span></span><span></span>
+      </button>
+      <a href="pages/geleias.html" class="link-nav">Geleias</a>
+      <a href="pages/sucos.html" class="link-nav">Sucos</a>
+      <a href="pages/queijos.html" class="link-nav">Queijos</a>
+      <a href="pages/paes.html" class="link-nav">Pães</a>
+      <a href="pages/vinhos.html" class="link-nav">Vinhos</a>
+      <a href="pages/destilados.html" class="link-nav">Destilados</a>
+      <a href="pages/conservas.html" class="link-nav">Conservas</a>
 
-    <nav class="nav">
-      <!-- <img class="menu-amborgue-icon" src="../img/" alt="Menu"> -->
-      <!-- <a href="#" class="todas-categorias">Todas Categorias</a> -->
+    </nav><!-- ----Barra de Navegação---- -->
 
-      <a href="geleias.html" class="todas-categorias">Geleias</a>
-      <a href="sucos.html" class="todas-categorias">Sucos</a>
-      <a href="queijos.html" class="todas-categorias">Queijos</a>
-      <a href="paes.html" class="todas-categorias">Pães</a>
-      <a href="vinhos.html" class="todas-categorias">Vinhos</a>
-      <a href="destilados.html" class="todas-categorias">Destilados</a>
-      <a href="conservas.html" class="todas-categorias">Conservas</a>
-    </nav>
+
+
+    <!-- Menu mobile: controlado pelo JS/index/menuhamburguer.js -->
+    <div id="menu">
+      <a href="pages/geleias.html">Geleias</a>
+      <a href="pages/sucos.html">Sucos</a>
+      <a href="pages/queijos.html">Queijos</a>
+      <a href="pages/paes.html">Pães</a>
+      <a href="pages/vinhos.html">Vinhos</a>
+      <a href="pages/destilados.html">Destilados</a>
+      <a href="pages/conservas.html">Conservas</a>
+    </div>
   </header>
 
-  <section class="slider">
-    <img class="slider-icons" src="../img/fundo madeira.jpg" alt="">
 
-    <div class="slider-content">
-      <div class="slider-text">
-        <div class="frete">Frete grátis nos 3 primeiros itens</div>
-        <div class="ofertas">Aproveite ofertas exclusivas na sua primeira compra.</div>
-        <button class="btn-explorar">EXPLORAR PRODUTOS</button>
-      </div>
 
-      <div class="slider-images">
-        <img class="queijo-na-tabua-1" src="../img/tabua de frios.png" alt="Queijo na tábua">
-        <img class="salame-1-icon" src="../img/salame logo.png" alt="Salame">
-        <img class="licor-1-icon" src="../img/licor.png" alt="Licor">
-        <img class="vinho-bonito-1" src="../img/suco uva.png" alt="Vinho">
-        <img class="goiabada-1-icon" src="../img/geleia.png" alt="Goiabada">
-      </div>
-    </div>
-  </section>
+ <section class="banner-principal"> <!-- --------------------------------- Começo Sessão banner-principal--------------------------------- -->
 
-  <section class="categories-slider">
-    <img class="nav-slider-icon" src="../img/nav-slider.png" alt="">
+    <img class="banner-fundo" src="img/fundo-madeira.jpg" alt="">
 
-    <div class="categories-inner">
+    <div class="banner-conteudo">
 
-      <div class="category-item">
-        <div class="category-circle">
-          <img src="../img/massa.png" alt="Massas">
+      <div class="banner-texto">
+        <div class="banner-titulo">
+          Frete grátis nos 3 primeiros itens
         </div>
-        <span class="category-label">MASSAS</span>
+
+        <div class="banner-subtitulo">
+          Aproveite ofertas exclusivas na sua primeira compra.
+        </div>
+
+        <a href="pages/todasCategorias.html">
+          <button class="btn-explorar">EXPLORAR PRODUTOS</button>
+        </a>
       </div>
 
-      <div class="category-item">
-        <div class="category-circle">
-          <img src="../img/vinho bola.png" alt="Vinhos">
-        </div>
-        <span class="category-label">VINHOS</span>
-      </div>
-      
-      <div class="category-item">
-        <div class="category-circle">
-          <img src="../img/taças.png" alt="Espumantes">
-        </div>
-        <span class="category-label">ESPUMANTES</span>
-      </div>
-
-      <div class="category-item">
-        <div class="category-circle">
-          <img src="../img/cerveja.png" alt="Cervejas">
-        </div>
-        <span class="category-label">CERVEJAS</span>
-      </div>
-
-      <div class="category-item">
-        <div class="category-circle">
-          <img src="../img/queijo.png" alt="Queijos">
-        </div>
-        <span class="category-label">QUEIJOS</span>
-      </div>
-
-      <div class="category-item">
-        <div class="category-circle">
-          <img src="../img/pão.png" alt="Pães">
-        </div>
-        <span class="category-label">PÃES</span>
-      </div>
-
-      <div class="category-item">
-        <div class="category-circle">
-          <img src="../img/cafe.png" alt="Cafés">
-        </div>
-        <span class="category-label">CAFÉS</span>
+      <div class="banner-imagens">
+        <img class="img-tabua-frios" src="img/produto-tabua-frios.png" alt="Queijo na tábua">
+        <img class="img-salame" src="img/produto-salame.png" alt="Salame">
+        <img class="img-licor" src="img/produto-licor.png" alt="Licor">
+        <img class="img-suco-uva" src="img/produto-suco-uva.png" alt="Suco de uva">
+        <img class="img-geleia" src="img/produto-geleia.png" alt="Geleia">
       </div>
 
     </div>
 
-  </section>
+  </section> <!-- -------------------------------------------------------- fim Sessão banner-principal--------------------------------- -->
 
-  <div class="frete-banner">
 
-    <div class="frete-container">
-      <b>FRETE GRATIS ACIMA DE R$300.</b>
-      <span class="consulte-seu-cep"> Consulte seu CEP</span>
+
+
+
+  <section class="slider-categorias"> <!-- --------------------------------- Começo Sessão slider-categorias--------------------------------- -->
+    
+    <div class="categorias-lista">
+
+      <div class="categoria-item">
+        <a href="">
+          <div class="categoria-circulo">
+            <img src="img/categoria-massa.png" alt="Massas">
+          </div>
+        </a>
+
+        <span class="categoria-nome">MASSAS</span>
+      </div>
+
+      <div class="categoria-item">
+        <a href="">
+          <div class="categoria-circulo">
+            <img src="img/categoria-vinho.png" alt="Vinhos">
+          </div>
+        </a>
+
+        <span class="categoria-nome">VINHOS</span>
+      </div>
+
+      <div class="categoria-item">
+        <a href="">
+          <div class="categoria-circulo">
+            <img src="img/categoria-espumante.png" alt="Espumantes">
+          </div>
+        </a>
+
+        <span class="categoria-nome">ESPUMANTES</span>
+      </div>
+
+      <div class="categoria-item">
+        <a href="">
+          <div class="categoria-circulo">
+            <img src="img/categoria-cerveja.png" alt="Cervejas">
+          </div>
+        </a>
+
+        <span class="categoria-nome">CERVEJAS</span>
+      </div>
+
+      <div class="categoria-item">
+        <a href="">
+          <div class="categoria-circulo">
+            <img src="img/categoria-queijo.png" alt="Queijos">
+          </div>
+        </a>
+
+        <span class="categoria-nome">QUEIJOS</span>
+      </div>
+
+      <div class="categoria-item">
+        <a href="">
+          <div class="categoria-circulo">
+            <img src="img/categoria-pao.png" alt="Pães">
+          </div>
+        </a>
+
+        <span class="categoria-nome">PÃES</span>
+      </div>
+
+      <div class="categoria-item">
+        <a href=""></a>
+          <div class="categoria-circulo">
+            <img src="img/categoria-cafe.png" alt="Cafés">
+          </div>
+        </a>
+        <span class="categoria-nome">CAFÉS</span>
+      </div>
+
     </div>
 
-    <img class="carrinho-de-frete" src="../img/shopping_cart_checkout_1000dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png"
-      alt="Carrinho">
+  </section><!-- --------------------------------- Fim Sessão slider-categorias--------------------------------- -->
+
+
+
+
+  <div class="banner-frete">
+
+    <div class="banner-frete-texto">
+      <b>FRETE GRÁTIS ACIMA DE R$300.</b>
+      <span class="banner-frete-cep"> Consulte seu CEP</span>
+    </div>
+
+    <img class="banner-frete-icone" src="img/icone-carrinho-checkout.png" alt="Carrinho">
 
   </div>
 
-  <section class="destaques-section">
-    
-    <div class="destaques-text">
-      <b class="destaques">DESTAQUES</b>
-      <div class="destaques-underline"></div>
+  <section class="secao-destaques">
+
+    <div class="destaques-cabecalho">
+      <b class="destaques-titulo">DESTAQUES</b>
+      <div class="destaques-linha"></div>
     </div>
 
-    <div class="item-1-parent">
+    <!-- --------------------------------- Lista Produtos--------------------------------- -->
+    <div class="lista-produtos">
 
-      <div class="item-1">
-        <div class="item-img-wrapper">
-          <img class="vinho-01-icon" src="../img/vinho logo.png" alt="Vinho Côtto Duro">
-        </div>
-        <div class="item-info">
-          <span class="item-name">Vinho Côtto Duro - 750ml</span>
-          <span class="item-price">R$99,80</span>
-        </div>
-        <button class="btn-comprar">COMPRAR</button>
+      <div class="card-produto">
+        <a href="">
+          <div class="produto-imagem-area">
+            <img class="produto-imagem" src="img/produto-vinho-cotto.png" alt="Vinho Côtto Duro">
+          </div>
+
+          <div class="produto-info">
+            <span class="produto-nome">Vinho Côtto Duro - 750ml</span>
+            <span class="produto-preco">R$99,80</span>
+          </div>
+
+          <button class="btn-comprar">COMPRAR</button>
+        </a>
       </div>
 
-      <div class="item-1">
-        <div class="item-img-wrapper">
-          <img class="vinho-01-icon" src="../img/vinho logo.png" alt="Vinho Côtto Duro">
-        </div>
-        <div class="item-info">
-          <span class="item-name">Vinho Côtto Duro - 750ml</span>
-          <span class="item-price">R$99,80</span>
-        </div>
-        <button class="btn-comprar">COMPRAR</button>
+      <div class="card-produto">
+        <a href="">
+          <div class="produto-imagem-area">
+            <img class="produto-imagem" src="img/produto-vinho-cotto.png" alt="Vinho Côtto Duro">
+          </div>
+
+          <div class="produto-info">
+            <span class="produto-nome">Vinho Côtto Duro - 750ml</span>
+            <span class="produto-preco">R$99,80</span>
+          </div>
+
+          <button class="btn-comprar">COMPRAR</button>
+        </a>
       </div>
 
-      <div class="item-1">
-        <div class="item-img-wrapper">
-          <img class="vinho-01-icon" src="../img/vinho logo.png" alt="Vinho Côtto Duro">
-        </div>
-        <div class="item-info">
-          <span class="item-name">Vinho Côtto Duro - 750ml</span>
-          <span class="item-price">R$99,80</span>
-        </div>
-        <button class="btn-comprar">COMPRAR</button>
+      <div class="card-produto">
+        <a href="">
+          <div class="produto-imagem-area">
+            <img class="produto-imagem" src="img/produto-vinho-cotto.png" alt="Vinho Côtto Duro">
+          </div>
+
+          <div class="produto-info">
+            <span class="produto-nome">Vinho Côtto Duro - 750ml</span>
+            <span class="produto-preco">R$99,80</span>
+          </div>
+
+          <button class="btn-comprar">COMPRAR</button>
+        </a>
       </div>
 
-      <div class="item-1">
-        <div class="item-img-wrapper">
-          <img class="vinho-01-icon" src="../img/vinho logo.png" alt="Vinho Côtto Duro">
-        </div>
-        <div class="item-info">
-          <span class="item-name">Vinho Côtto Duro - 750ml</span>
-          <span class="item-price">R$99,80</span>
-        </div>
-        <button class="btn-comprar">COMPRAR</button>
+      <div class="card-produto">
+        <a href="">
+          <div class="produto-imagem-area">
+            <img class="produto-imagem" src="img/produto-vinho-cotto.png" alt="Vinho Côtto Duro">
+          </div>
+
+          <div class="produto-info">
+            <span class="produto-nome">Vinho Côtto Duro - 750ml</span>
+            <span class="produto-preco">R$99,80</span>
+          </div>
+
+          <button class="btn-comprar">COMPRAR</button>
+        </a>
       </div>
 
     </div>
 
-    <div class="boto-ver-todos-wrapper">
-      <button class="btn-ver-todos">VER TODOS</button>
+    <div class="ver-todos-area">
+        <a href="pages/vinhos.html">
+          <button class="btn-ver-todos">VER TODOS</button>
+        </a>
     </div>
-    
+
   </section>
 
-  <div class="image-parent">
-    <img class="image-icon" src="../img/vinho imagem.jpg" alt="Banner 1">
-    <img class="image-icon2" src="../img/vinho fundo.jpg" alt="Banner 2">
-    <img class="image-icon3" src="../img/vinho fundo 2.jpg" alt="Banner 3">
+
+
+  <div class="banners-vinhos">
+    <img src="img/banner-vinho-01.jpg" alt="Banner de vinhos 1">
+    <img src="img/banner-vinho-02.jpg" alt="Banner de vinhos 2"> 
+    <img src="img/banner-vinho-03.jpg" alt="Banner de vinhos 3">
   </div>
 
-  <footer class="marcas">
 
-    <div class="footer-top">
-      <img class="logo-emporio-dois-finalmente-2" src="../img/logo emporio.png" alt="Logo La Tavola">
+
+
+  <!--__________________________________________________________ COMEÇO DO FOOTER __________________________________________________________ -->
+  <footer class="site-footer">
+    <div class="footer-logo-area">
+      <img class="footer-logo" src="img/logo-emporio.png" alt="Logo La Tavola">
     </div>
 
     <div class="footer-grid">
-
-      <div class="footer-col">
+      <div class="footer-coluna">
 
         <h4>Contato</h4>
 
-        <div class="footer-social">
-          <img src="../img/facebooj.png" alt="Facebook">
-          <img src="../img/isntagram.png" alt="Instagram">
+        <div class="footer-redes-sociais">
+          <img src="img/logo-facebook.png" alt="Facebook">
+          <img src="img/logo-instagram.png" alt="Instagram">
         </div>
 
         <p>Segunda à sexta das 08h00 às 18h00</p>
 
-        <div class="footer-contact-item">
-          <img src="../img/email.png" alt="Email">
+        <div class="footer-contato-item">
+          <img src="img/icone-email.png" alt="Email">
           <span>latavola@gmail.com.br</span>
         </div>
 
-        <div class="footer-contact-item">
-          <img src="../img/whatsApp Logo.png" alt="WhatsApp">
+        <div class="footer-contato-item">
+          <img src="img/logo-whatsapp.png" alt="WhatsApp">
           <span>+55 (19) 9999-9999</span>
         </div>
 
       </div>
 
-      <div class="footer-col">
+      <div class="footer-coluna">
         <h4>Institucional</h4>
         <a href="#">Atendimento</a>
         <a href="#">Quem Somos</a>
@@ -257,31 +331,45 @@
         <a href="#">Avaliações</a>
       </div>
 
-      <div class="footer-col footer-payments">
+      <div class="footer-coluna footer-pagamentos">
+
         <h4>Formas de Pagamento</h4>
-        <div class="payment-logos">
-          <img src="../img/mastercard.png" alt="Mastercard">
-          <img src="../img/boleto.png" alt="Boleto">
-          <img src="../img/elo.png" alt="Elo">
-          <img src="../img/pix.png" alt="Pix">
-          <img src="../img/visa.png" alt="Visa">
+
+        <div class="logos-pagamento">
+          <img src="img/logo-mastercard.png" alt="Mastercard">
+          <img src="img/logo-boleto.png" alt="Boleto">
+          <img src="img/logo-elo.png" alt="Elo">
+          <img src="img/logo-pix.png" alt="Pix">
+          <img src="img/logo-visa.png" alt="Visa">
         </div>
 
         <h4>Selos de Segurança</h4>
-        <div class="seal-logos">
-          <img src="../img/google verificado.png" alt="Google Site Seguro">
-        </div>
-      </div>
 
+        <div class="logos-seguranca">
+          <img src="img/google-site-seguro.png" alt="Google Site Seguro">
+        </div>
+
+      </div>
     </div>
 
-    <div class="footer-divider"></div>
+    <hr class="footer-divisor">
 
-    <div class="footer-bottom">
+    <div class="footer-copy">
       Latavola | CNPJ: 41.628.257/0002-00 © Direitos Reservados www.latavola.com.br
     </div>
-  </footer>
 
-</body>
+  </footer><!--________________________________________________ FIM DO FOOTER ________________________________________________ -->
 
+
+
+  <!--_____________________________ LINKS SCRIPTS _____________________________ -->
+
+  <script src="JS/index/menuhamburguer.js"></script>
+  <script src="JS/index/index.js"></script>
+
+  <!--_____________________________ LINKS SCRIPTS _____________________________ -->
+
+
+
+</body><!--________________________________________________ FIM DO BODY ________________________________________________ -->
 </html>

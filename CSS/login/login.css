@@ -1,103 +1,103 @@
-/* ── CONTAINER ── */
-.container-login {
+@import url("../Global/global.css");
+
+/* ── PÁGINA LOGIN ── */
+.pagina-login {
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: calc(100vh - 130px);
   padding: 60px 16px;
   background-color: #f9f4f0;
-  min-height: calc(100vh - 130px);
 }
 
-/* ── BOX ── */
-.login-box {
-  background-color: #fff;
-  border-radius: 16px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
-  padding: 48px 40px;
+.card-login {
   width: 100%;
   max-width: 440px;
+  padding: 48px 40px;
+  border-radius: 16px;
+  background-color: #fff;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-.login-box h1 {
+.card-login h1 {
+  margin-bottom: 4px;
+  color: #3b2f1e;
   font-family: 'Libre Bodoni', serif;
   font-size: 28px;
   font-weight: 700;
-  color: #3b2f1e;
-  margin-bottom: 4px;
 }
 
-.login-box > p {
+.card-login > p {
+  margin-bottom: 20px;
+  color: #7c6e52;
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
-  color: #7c6e52;
-  margin-bottom: 20px;
 }
 
-/* ── FORM ── */
-#formLogin {
+.formulario-login {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.campo {
+/* ── CAMPOS DE FORMULÁRIO ── */
+.campo-formulario {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
 
-.campo label {
+.campo-formulario label {
+  color: #3b2f1e;
   font-family: 'Poppins', sans-serif;
   font-size: 13px;
   font-weight: 500;
-  color: #3b2f1e;
 }
 
-.campo input {
+.campo-formulario input {
   height: 44px;
-  border-radius: 10px;
-  border: 1.5px solid rgba(195, 195, 195, 0.97);
-  background-color: #faf8f5;
   padding: 0 16px;
+  border: 1.5px solid rgba(195, 195, 195, 0.97);
+  border-radius: 10px;
+  outline: none;
+  background-color: #faf8f5;
+  color: #3b2f1e;
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
-  color: #3b2f1e;
-  outline: none;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.campo input:focus {
+.campo-formulario input:focus {
   border-color: #7c6e52;
   box-shadow: 0 0 0 3px rgba(124, 110, 82, 0.12);
 }
 
-.campo input::placeholder {
+.campo-formulario input::placeholder {
   color: rgba(124, 110, 82, 0.5);
   font-size: 13px;
 }
 
-/* ── OPÇÕES DO LOGIN ── */
+/* ── OPÇÕES ── */
 .opcoes-login {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
+  color: #7c6e52;
   font-family: 'Poppins', sans-serif;
   font-size: 12px;
 }
 
 .opcoes-login a {
   color: #a50000;
-  text-decoration: none;
   font-weight: 500;
+  text-decoration: none;
   transition: opacity 0.2s;
 }
 
-.opcoes-login a:hover {
-  opacity: 0.75;
-}
+.opcoes-login a:hover { opacity: 0.75; }
 
 /* ── MENSAGEM DE FEEDBACK ── */
 .mensagem {
@@ -111,24 +111,25 @@
 
 .mensagem.erro {
   display: block;
+  border-left: 4px solid #a50000;
   background-color: #fdecea;
   color: #a50000;
-  border-left: 4px solid #a50000;
 }
 
 .mensagem.sucesso {
   display: block;
+  border-left: 4px solid #2e7d32;
   background-color: #eaf5ea;
   color: #2e7d32;
-  border-left: 4px solid #2e7d32;
 }
 
-/* ── BOTÃO ── */
+/* ── BOTÃO ENTRAR ── */
 .btn-entrar {
   width: 100%;
   height: 48px;
-  border-radius: 10px;
+  margin-top: 4px;
   border: none;
+  border-radius: 10px;
   background-color: #7c6e52;
   color: #fff;
   font-family: 'Poppins', sans-serif;
@@ -136,16 +137,10 @@
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.2s, transform 0.1s;
-  margin-top: 4px;
 }
 
-.btn-entrar:hover {
-  background-color: #5e5240;
-}
-
-.btn-entrar:active {
-  transform: scale(0.98);
-}
+.btn-entrar:hover { background-color: #5e5240; }
+.btn-entrar:active { transform: scale(0.98); }
 
 .btn-entrar:disabled {
   background-color: rgba(124, 110, 82, 0.45);
@@ -154,50 +149,42 @@
 }
 
 /* ── DIVISOR ── */
-.divisor {
+.divisor-formulario {
   display: flex;
   align-items: center;
   gap: 12px;
   margin: 8px 0;
   color: rgba(124, 110, 82, 0.5);
-  font-size: 13px;
   font-family: 'Poppins', sans-serif;
+  font-size: 13px;
 }
 
-.divisor::before,
-.divisor::after {
+.divisor-formulario::before,
+.divisor-formulario::after {
   content: '';
   flex: 1;
   height: 1px;
   background-color: rgba(124, 110, 82, 0.2);
 }
 
-/* ── LINK PARA CADASTRO ── */
-.cadastro-link {
-  text-align: center;
+/* ── LINK CADASTRO ── */
+.link-cadastro {
+  color: #7c6e52;
   font-family: 'Poppins', sans-serif;
   font-size: 13px;
-  color: #7c6e52;
+  text-align: center;
 }
 
-.cadastro-link a {
+.link-cadastro a {
   color: #a50000;
   font-weight: 600;
   text-decoration: none;
   transition: opacity 0.2s;
 }
 
-.cadastro-link a:hover {
-  opacity: 0.75;
-}
+.link-cadastro a:hover { opacity: 0.75; }
 
-/* ── MEDIA QUERIES ── */
 @media (max-width: 520px) {
-  .login-box {
-    padding: 32px 20px;
-  }
-
-  .login-box h1 {
-    font-size: 22px;
-  }
+  .card-login { padding: 32px 20px; }
+  .card-login h1 { font-size: 22px; }
 }

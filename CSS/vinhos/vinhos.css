@@ -1,0 +1,10 @@
+@import url("../Global/global.css");
+
+/* ── CONTEÚDO DA PÁGINA: vinhos ── */
+.pagina-conteudo {
+  padding: 40px;
+}
+
+@media (max-width: 768px) {
+  .pagina-conteudo { padding: 24px 16px; }
+}

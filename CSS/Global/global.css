@@ -7,25 +7,32 @@
 
 /* ── BODY ── */
 body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
   line-height: normal;
   background-color: #f9f4f0;
+  color: #7c6e52;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
-  color: #7c6e52;
-  overflow-x: hidden;
+}
+
+main {
+  flex: 1;
 }
 
 /* ── HEADER ── */
-.header-nav-actions {
-  width: 100%;
-  background-color: #f9f4f0;
+.site-header {
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  width: 100%;
+  background-color: #f9f4f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
-.fundo-header {
+.header-container {
   width: 100%;
   padding: 16px 40px;
   display: flex;
@@ -35,101 +42,181 @@ body {
   flex-wrap: wrap;
 }
 
-.logo-emporio-dois-finalmente-1 {
+.header-logo {
   width: 100px;
   object-fit: contain;
   flex-shrink: 0;
 }
 
-.barra-de-pesquisa {
+/* ── BARRA DE PESQUISA ── */
+.barra-pesquisa {
   flex: 1;
   max-width: 600px;
+  min-width: 200px;
   height: 40px;
+  border: none;
   border-radius: 10px;
   background-color: rgba(195, 195, 195, 0.97);
-  min-width: 200px;
+  padding: 0 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: #3b2f1e;
+  outline: none;
+  transition: box-shadow 0.2s;
 }
 
-.header-actions {
+.barra-pesquisa:focus {
+  box-shadow: 0 0 0 2px rgba(124, 110, 82, 0.35);
+}
+
+.barra-pesquisa::placeholder {
+  color: rgba(124, 110, 82, 0.55);
+}
+
+/* ── AÇÕES DO HEADER ── */
+.header-acoes {
   display: flex;
   align-items: center;
   gap: 32px;
   flex-shrink: 0;
+  color: #000;
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
-  color: #000;
 }
 
-.boto-localizao,
-.boto-login {
+.link-header {
   display: flex;
   align-items: center;
   gap: 6px;
-  cursor: pointer;
-  white-space: nowrap;
-}
-
-.location-1-icon,
-.login-icon {
-  width: 22px;
-  height: 22px;
-  object-fit: contain;
-}
-
-/* ── NAV ── */
-.nav {
-  width: 100%;
-  background-color: #f9f4f0;
-  border-top: 1px solid rgba(0,0,0,0.12);
-  border-bottom: 1px solid rgba(0,0,0,0.12);
-  padding: 0 40px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  overflow-x: auto;
-  height: 50px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  color: #7c6e52;
-}
-
-.nav::-webkit-scrollbar { display: none; }
-
-.menu-amborgue-icon {
-  width: 18px;
-  height: 14px;
-  flex-shrink: 0;
-  object-fit: contain;
-}
-
-.todas-categorias {
+  color: #000;
+  text-decoration: none;
   white-space: nowrap;
   cursor: pointer;
   transition: color 0.2s;
-  display: block;
-  width: fit-content;
-  margin: 0 auto;
 }
 
-.todas-categorias:hover { color: #a50000; }
+.link-header:hover {
+  color: #a50000;
+}
+
+.icone-header {
+  width: 25px;
+  height: 22px;
+  object-fit: contain;
+
+}
+
+/* ── NAV PRINCIPAL ── */
+.nav-principal {
+  width: 100%;
+  height: 50px;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;   /* categorias centralizadas */
+  gap: 40px;                 /* espaçamento generoso entre links */
+  background-color: #f9f4f0;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  overflow-x: auto;
+}
+
+.nav-principal::-webkit-scrollbar {
+  display: none;
+}
+
+/* ── BOTÃO HAMBURGUER ── */
+.btn-hamburguer {
+  display: none;              /* só aparece em mobile */
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  padding: 4px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.btn-hamburguer span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #7c6e52;
+  transition: background-color 0.2s;
+}
+
+.btn-hamburguer:hover span {
+  background-color: #a50000;
+}
+
+/* ── LINKS DA NAV ── */
+.link-nav {
+  color: #7c6e52;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color 0.2s;
+  font-size: 14px;
+}
+
+.link-nav:hover {
+  color: #a50000;
+}
+
+/* ── MENU DROPDOWN MOBILE (controlado pelo JS existente) ── */
+#menu {
+  display: none;
+  flex-direction: column;
+  gap: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #f9f4f0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  z-index: 200;
+}
+
+#menu a {
+  display: block;
+  padding: 14px 24px;
+  color: #7c6e52;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  transition: background-color 0.15s, color 0.15s;
+}
+
+#menu a:hover {
+  background-color: #ede8e2;
+  color: #a50000;
+}
 
 /* ── FOOTER ── */
-.marcas {
+.site-footer {
   width: 100%;
-  background-color: #d9d9d9;
   padding: 60px 40px 40px;
+  background-color: #d9d9d9;
+  color: rgba(0, 0, 0, 0.61);
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
-  color: rgba(0,0,0,0.61);
 }
 
-.footer-top {
+.footer-logo-area {
   display: flex;
   justify-content: center;
   margin-bottom: 40px;
 }
 
-.logo-emporio-dois-finalmente-2 {
+.footer-logo {
   width: 120px;
   height: 120px;
   object-fit: contain;
@@ -143,60 +230,65 @@ body {
   margin: 0 auto 40px;
 }
 
-.footer-col h4 {
+.footer-coluna h4,
+.footer-pagamentos h4 {
+  margin-bottom: 12px;
+  color: #000;
   font-size: 14px;
   font-weight: 600;
-  color: #000;
-  margin-bottom: 12px;
 }
 
-.footer-col p,
-.footer-col a {
+.footer-coluna p,
+.footer-coluna a {
+  display: block;
+  color: #505050;
   font-size: 13px;
   font-weight: 300;
-  color: #505050;
-  display: block;
   line-height: 1.8;
   text-decoration: none;
+  transition: color 0.2s;
 }
 
-.footer-social {
+.footer-coluna a:hover {
+  color: #a50000;
+}
+
+.footer-redes-sociais {
   display: flex;
   gap: 16px;
   margin-bottom: 12px;
 }
 
-.footer-social img {
+.footer-redes-sociais img {
   width: 28px;
   height: 28px;
   object-fit: contain;
+  cursor: pointer;
+  transition: opacity 0.2s;
 }
 
-.footer-contact-item {
+.footer-redes-sociais img:hover {
+  opacity: 0.7;
+}
+
+.footer-contato-item {
   display: flex;
   align-items: center;
   gap: 8px;
   margin-bottom: 8px;
+  color: #505050;
   font-size: 13px;
   font-weight: 300;
-  color: #505050;
 }
 
-.footer-contact-item img {
+.footer-contato-item img {
   width: 22px;
   height: 22px;
   object-fit: contain;
   flex-shrink: 0;
 }
 
-.footer-payments h4 {
-  font-size: 14px;
-  font-weight: 600;
-  color: #000;
-  margin-bottom: 12px;
-}
-
-.payment-logos {
+.logos-pagamento {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
@@ -204,62 +296,67 @@ body {
   margin-bottom: 16px;
 }
 
-.payment-logos img {
-  height: 30px;
+.logos-pagamento img {
   width: auto;
+  height: 30px;
   object-fit: contain;
 }
 
-.seal-logos {
+.logos-seguranca {
   display: flex;
   gap: 12px;
   align-items: center;
 }
 
-.seal-logos img {
-  height: 35px;
+.logos-seguranca img {
   width: auto;
+  height: 40px;
   object-fit: contain;
 }
 
-.footer-divider {
-  border-top: 2px solid rgba(161,161,161,0.26);
+.footer-divisor {
   margin: 20px 0;
+  border: none;
+  border-top: 2px solid rgba(161, 161, 161, 0.26);
 }
 
-.footer-bottom {
-  text-align: center;
-  font-size: 12px;
-  font-weight: 300;
-  color: rgba(0,0,0,0.61);
+.footer-copy {
   max-width: 1200px;
   margin: 0 auto;
+  color: rgba(0, 0, 0, 0.61);
+  font-size: 12px;
+  font-weight: 300;
+  text-align: center;
 }
 
-/* ── MEDIA QUERIES GLOBAIS ── */
+/* ── RESPONSIVO ── */
 @media (max-width: 768px) {
-  .fundo-header {
+  .header-container {
     padding: 12px 16px;
     gap: 12px;
   }
 
-  .barra-de-pesquisa {
+  .barra-pesquisa {
     order: 3;
     width: 100%;
     max-width: 100%;
   }
 
-  .header-actions {
+  .header-acoes {
     gap: 16px;
     font-size: 12px;
   }
 
-  .nav {
-    padding: 0 16px;
-    gap: 6px;
+  /* Nav desktop some; hamburguer aparece */
+  .nav-principal {
+    display: none;
   }
 
-  .marcas {
+  .btn-hamburguer {
+    display: flex;
+  }
+
+  .site-footer {
     padding: 40px 16px 24px;
   }
 
