@@ -1,7 +1,7 @@
 const express = require('express')
 const cors = require('cors')
 require("./config/db")
-// const loginRoutes = require('./routes/loginRoutes')
+const loginRoutes = require('./routes/loginRoutes')
 
 const app = express()
 app.use(cors())
@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
 
 
 // Rota de Login e Cadastro
-// app.use("/", loginRoutes)
+app.use("/", loginRoutes)
 
 
 

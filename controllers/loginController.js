@@ -5,7 +5,7 @@ const dotenv = require('dotenv')
 dotenv.config()
 
 // Cadastrar (nome, email, senha)
-exports.create = async (req, res) => {
+exports.cadastro = async (req, res) => {
     const { nome, email, senha } = req.body
 
     if (!nome || !email || !senha) {
@@ -64,7 +64,7 @@ exports.login = async (req, res) => {
             return res.status(401).json({ erro: "Credenciais inválidas!" })
         }
 
-        if (!await bcrypt.compare(senha, usuario)) {
+        if (!await bcrypt.compare(senha, usuario.senha)) {
             return res.status(401).json({ erro: "Senha incorreta" })
         }
 
@@ -78,6 +78,12 @@ exports.login = async (req, res) => {
         //     token,
         //     id: usuario._id
         // })
+
+        res.status(200).json({
+            msg: "Autenticação realizada com sucesso!",
+            // token,
+            id: usuario._id
+        })
 
     } catch (error) {
         res.status(500).json({ erro: "Erro ao realizar login" })
