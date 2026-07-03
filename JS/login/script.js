@@ -5,7 +5,7 @@ function mostrarMensagem(texto, tipo = 'erro') {
     el.className = `mensagem ${tipo}`
 }
 
-document.getElementById('formLogin')?.addEventListener('submit'), async (event) => {
+document.getElementById('formLogin')?.addEventListener('submit', async (event) => {
     event.preventDefault()
     
     const email = document.getElementById('emailLogin').value
@@ -16,20 +16,25 @@ document.getElementById('formLogin')?.addEventListener('submit'), async (event) 
         return
     }
 
-    fetch ('http://localhost:3000/login', {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, senha })
-    })
-    .then(res => {
-        if (res.ok) {
-            mostrarMensagem('Login realizado! Redirecionando...', 'sucesso')
-            setTimeout(() => window.location.href = '../index.html', 1500)
-        } else {
-            mostrarMensagem('Credenciais inválidas.', 'erro')
+    try {
+        const response = await fetch ('http://localhost:3000/login', {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email, senha })
+        })
+
+        const data = await response.json()
+
+        if (!response.ok) {
+            mostrarMensagem(data.erro)
+            return
         }
-    })
-    .catch (error => {
-        console.error("Erro: ", error)
-    })
-}
+
+        mostrarMensagem('Login realizado! Redirecionando...', 'sucesso')
+        setTimeout(() => {window.location.href = '../index.html'}, 1500)
+        
+    } catch (error) {
+        console.error(error)
+        mostrarMensagem('Erro ao conectar com o servidor.')
+    }
+})
