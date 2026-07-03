@@ -3,8 +3,15 @@
 /* ── CONTEÚDO DA PÁGINA: localizacao ── */
 .pagina-conteudo {
   padding: 40px;
+  justify-content: center;
 }
+
+.pagina-conteudo mapa{
+  justify-content: center;
+}
+
 
 @media (max-width: 768px) {
   .pagina-conteudo { padding: 24px 16px; }
 }
+
