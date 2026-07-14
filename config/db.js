@@ -10,7 +10,9 @@ async function main() {
     await mongoose.connect (
 
         // Link para a conexão com o Banco de Dados
-        `mongodb+srv://${dbUser}:${dbPassword}@cluster0.vkty6dm.mongodb.net/DB_Projeto-Integrador?appName=Cluster0`
+        // `mongodb+srv://${dbUser}:${dbPassword}@cluster0.vkty6dm.mongodb.net/DB_Projeto-Integrador?appName=Cluster0`
+
+        `mongodb://${dbUser}:${dbPassword}@ac-4kplagn-shard-00-00.vkty6dm.mongodb.net:27017,ac-4kplagn-shard-00-01.vkty6dm.mongodb.net:27017,ac-4kplagn-shard-00-02.vkty6dm.mongodb.net:27017/DB_Projeto-Integrador?ssl=true&replicaSet=atlas-80gkzk-shard-0&authSource=admin&appName=Cluster0`
 
     )
 

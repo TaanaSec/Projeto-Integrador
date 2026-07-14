@@ -58,7 +58,9 @@ exports.login = async (req, res) => {
     }
 
     try {
-        const usuario = await login.findOne({ email })
+        const usuario = await login
+            .findOne({ email })
+            .select('+senha')
 
         if (!usuario) {
             return res.status(401).json({ erro: "Credenciais inválidas!" })
@@ -81,7 +83,6 @@ exports.login = async (req, res) => {
 
         res.status(200).json({
             msg: "Autenticação realizada com sucesso!",
-            // token,
             usuario: {
                 id: usuario._id,
                 nome: usuario.nome,
