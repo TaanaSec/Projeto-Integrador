@@ -28,18 +28,28 @@ document.getElementById('formCadastro')?.addEventListener('submit', async (event
 
 
     // Salvar o registro do usuário no db
-    fetch ('http://localhost:3000/cadastro', {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ nome, email, senha })
-    })
-    .then (response => {
+    try {
+        const response = await fetch('http://localhost:3000/cadastro', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ nome, email, senha })
+        })
+
+        const data = await response.json()
+
+        if (!response.ok) {
+            mostrarMensagem(data.erro)
+            return
+        }
+
         if (response.ok) {
             mostrarMensagem('Cadastro realizado! Redirecionando...', 'sucesso')
             setTimeout(() => window.location.href = '../index.html', 1500)
         }
-    })
-    .catch(error => {
-        console.error("Error: ", error)
-    })
+
+    } catch (error) {
+        console.error(error)
+    }
 })

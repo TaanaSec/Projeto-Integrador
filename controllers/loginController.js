@@ -7,6 +7,11 @@ dotenv.config()
 // Cadastrar (nome, email, senha)
 exports.cadastro = async (req, res) => {
     const { nome, email, senha } = req.body
+    const usuarioExiste = await login.findOne({ email })
+
+    if (usuarioExiste) {
+        return res.status(409).json({ erro: "Este e-mail já está cadastrado." })
+    }
 
     if (!nome || !email || !senha) {
         return res.status(400).json({ erro: "Todos os campos são obrigatórios!" })
@@ -67,7 +72,7 @@ exports.login = async (req, res) => {
         }
 
         if (!await bcrypt.compare(senha, usuario.senha)) {
-            return res.status(401).json({ erro: "Senha incorreta" })
+            return res.status(401).json({ erro: "Credenciais inválidas!" })
         }
 
         // TOKEN
