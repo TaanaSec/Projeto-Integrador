@@ -1,7 +1,7 @@
 function mostrarMensagem(texto, tipo = 'erro') {
     const el = document.getElementById('mensagem')
     if (!el) return
-    el.textContent = texto
+    el.innerHTML = texto
     el.className = `mensagem ${tipo}`
 }
 
