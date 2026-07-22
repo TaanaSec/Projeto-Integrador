@@ -19,23 +19,31 @@ document.getElementById('formCadastro')?.addEventListener('submit', async (event
         return regex.test(senha)
     }
 
+    const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+
 
     // Valida se o usuário preencheu todos os campos
     if (!nome || !email || !senha || !confirmarSenha) {
-        mostrarMensagem('Preencha todos os campos.')
+        mostrarMensagem("Preencha todos os campos.")
+        return
+    }
+
+    // Verifica se o formato do e-mail é válido
+    if (!emailValido) {
+        mostrarMensagem("Digite um e-mail válido.")
         return
     }
 
     // Valida se a senha e o confirSenha são identicos
     if (senha !== confirmarSenha) {
-        mostrarMensagem('As senhas não coincidem.')
+        mostrarMensagem("As senhas não coincidem.")
         return
     }
 
     // Valida as condições da senha
     if (!verificarSenha(senha)) {
         mostrarMensagem(
-            'A senha precisa atender os seguintes requisitos: <br><br> A senha precisa ter no mínimo 8 caracteres <br> A senha precisa ter no mínimo um caractere especial <br> A senha precisa ter no mínimo um número <br> A senha precisa ter no mínimo um caractere maiúsculo ou minúsculo'
+            "A senha precisa atender os seguintes requisitos: <br><br> A senha precisa ter no mínimo 8 caracteres <br> A senha precisa ter no mínimo um caractere especial <br> A senha precisa ter no mínimo um número <br> A senha precisa ter no mínimo um caractere maiúsculo ou minúsculo"
         )
         return
     }
@@ -59,7 +67,7 @@ document.getElementById('formCadastro')?.addEventListener('submit', async (event
         }
 
         if (response.ok) {
-            mostrarMensagem('Cadastro realizado! Redirecionando...', 'sucesso')
+            mostrarMensagem("Cadastro realizado! Redirecionando...", "sucesso")
             setTimeout(() => window.location.href = '../index.html', 1500)
         }
 

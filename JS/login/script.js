@@ -30,11 +30,11 @@ document.getElementById('formLogin')?.addEventListener('submit', async (event) =
             return
         }
 
-        mostrarMensagem('Login realizado! Redirecionando...', 'sucesso')
+        mostrarMensagem("Login realizado! Redirecionando...', 'sucesso")
         setTimeout(() => {window.location.href = '../index.html'}, 1500)
         
     } catch (error) {
         console.error(error)
-        mostrarMensagem('Erro ao conectar com o servidor.')
+        mostrarMensagem("Erro ao conectar com o servidor.")
     }
 })
