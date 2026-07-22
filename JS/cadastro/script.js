@@ -26,6 +26,12 @@ document.getElementById('formCadastro')?.addEventListener('submit', async (event
         return
     }
 
+    // Verifica se a senha tem no mínimo 8 caracteres
+    if (senha.length < 8) {
+        mostrarMensagem('A senha precisa ter no mínimo 8 caracteres.')
+        return
+    }
+
 
     // Salvar o registro do usuário no db
     try {
