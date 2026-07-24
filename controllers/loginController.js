@@ -42,7 +42,15 @@ exports.cadastro = async (req, res) => {
                 to: email,
                 subject: `🎉 ${nome}, bem-vindo ao LaTavola!`,
                 text: `Olá ${nome}, obrigado por se registrar no LaTavola!`,
-                html: `<h2>Olá ${nome}</h2><p>Bem Vindo ao LaTavola!!!</p>`
+                html: `
+                        <div style="font-family: Arial, sans-serif; color: #333; max-width: 600px; margin: 0 auto;">
+                            <h2 style="color: #d32f2f;">Olá, ${nome}!</h2>
+                            <p style="font-size: 16px; line-size: 1.5;">Obrigado por se registrar no <strong>LaTavola</strong>.</p>
+                            <p style="font-size: 16px;">Seja muito bem-vindo à nossa comunidade!</p>
+                            <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;" />
+                            <small style="color: #777;">Se você não realizou este cadastro, desconsidere este e-mail.</small>
+                        </div>
+                    `
             })
 
         } catch (error) {
