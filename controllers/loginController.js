@@ -1,7 +1,7 @@
 const login = require('../models/loginModel')
 const bcrypt = require('bcrypt')
 const dotenv = require('dotenv')
-// const nodemailer = require('nodemailer')
+const nodemailer = require('nodemailer')
 dotenv.config()
 
 // Cadastrar (nome, email, senha)
@@ -26,28 +26,28 @@ exports.cadastro = async (req, res) => {
         res.status(201).json(novoLogin)
 
         // Envio de e-mail de boas-vindas
-        // try {
-        //     const transportador = nodemailer.createTransport({
-        //         host: process.env.SMTP_HOST,
-        //         port: process.env.SMTP_PORT,
-        //         secure: process.env.SMTP_SECURE === 'true',
-        //         auth: {
-        //             user: process.env.SMTP_USER,
-        //             pass: process.env.SMTP_PASS,
-        //         },
-        //     })
+        try {
+            const transportador = nodemailer.createTransport({
+                host: process.env.SMTP_HOST,
+                port: process.env.SMTP_PORT,
+                secure: process.env.SMTP_SECURE === 'true',
+                auth: {
+                    user: process.env.SMTP_USER,
+                    pass: process.env.SMTP_PASS,
+                },
+            })
 
-        //     await transportador.senMail({
-        //         from: process.env.SMTP_FROM || process.env.SMTP_USER,
-        //         to: email,
-        //         subject: "Bem-vindo!",
-        //         text: `Olá ${nome}, obrigado por se registrar no LaTavola!`,
-        //         html: `<h2>Olá ${nome},</h2><p>Obrigado por se registrar!!!!!!</p>`
-        //     })
+            await transportador.sendMail({
+                from: process.env.SMTP_FROM || process.env.SMTP_USER,
+                to: email,
+                subject: `🎉 ${nome}, bem-vindo ao LaTavola!`,
+                text: `Olá ${nome}, obrigado por se registrar no LaTavola!`,
+                html: `<h2>Olá ${nome}</h2><p>Bem Vindo ao LaTavola!!!</p>`
+            })
 
-        // } catch (error) {
-        //     console.error("Erro ao enviar e-mail de boas-vindas: ", error.message)
-        // }
+        } catch (error) {
+            console.error("Erro ao enviar e-mail de boas-vindas: ", error.message)
+        }
 
     } catch (error) {
         res.status(500).json({ erro: "Erro ao realizar cadastro." })
