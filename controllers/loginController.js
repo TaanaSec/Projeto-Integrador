@@ -1,5 +1,6 @@
 const login = require('../models/loginModel')
 const bcrypt = require('bcrypt')
+const jwt = require('jsonwebtoken')
 const dotenv = require('dotenv')
 const nodemailer = require('nodemailer')
 dotenv.config()
@@ -84,9 +85,9 @@ exports.login = async (req, res) => {
         }
 
         // TOKEN
-        // const token = jwt.sign({ id: usuario._id }, process.env.SECRET, {
-        //     expiresIn: "20s"
-        // })
+        const token = jwt.sign({ id: usuario._id }, process.env.SECRET, {
+            expiresIn: "10s"
+        })
 
         // res.status(200).json({
         //     msg: "Autenticação realizada com sucesso!",
@@ -96,6 +97,7 @@ exports.login = async (req, res) => {
 
         res.status(200).json({
             msg: "Autenticação realizada com sucesso!",
+            token,
             usuario: {
                 id: usuario._id,
                 nome: usuario.nome,
