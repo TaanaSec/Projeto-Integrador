@@ -66,6 +66,15 @@ document.getElementById('formCadastro')?.addEventListener('submit', async (event
             return
         }
 
+        sessionStorage.setItem(
+            'usuarioLogado',
+            JSON.stringify({
+                id: data._id,
+                nome: data.nome,
+                email: data.email
+            })
+        )
+
         if (response.ok) {
             mostrarMensagem("Cadastro realizado! Redirecionando...", "sucesso")
             setTimeout(() => window.location.href = '../index.html', 1500)

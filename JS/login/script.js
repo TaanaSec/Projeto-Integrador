@@ -30,6 +30,11 @@ document.getElementById('formLogin')?.addEventListener('submit', async (event) =
             return
         }
 
+        sessionStorage.setItem(
+            'usuarioLogado',
+            JSON.stringify(data.usuario)
+        )
+
         mostrarMensagem("Login realizado! Redirecionando...', 'sucesso")
         setTimeout(() => {window.location.href = '../index.html'}, 1500)
         
