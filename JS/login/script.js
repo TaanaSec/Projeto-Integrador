@@ -30,6 +30,13 @@ document.getElementById('formLogin')?.addEventListener('submit', async (event) =
             return
         }
 
+
+        // Abre a sessão do usuário quando logado
+        sessionStorage.setItem(
+            'token',
+            data.token
+        )
+
         sessionStorage.setItem(
             'usuarioLogado',
             JSON.stringify(data.usuario)
