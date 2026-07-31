@@ -21,4 +21,5 @@ fetch('http://localhost:3000/perfil', {
 })
 .then(data => {
     document.getElementById('nomeUsuario').textContent = data.nome
+    document.getElementById('emailUsuario').textContent = data.email
 })
