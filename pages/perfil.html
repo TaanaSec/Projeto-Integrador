@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Login - La Tavola</title>
+
+  <link rel="icon" href="../icon/logo-emporio.ico" type="image/ico">
+  <link rel="stylesheet" href="../CSS/login/login.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+</head>
+
+<body>
+    <!--________________________________________________ Começo do Header ________________________________________________ -->
+    <header class="site-header" style="position:relative;">
+    <div class="header-container">
+
+      <a href="../index.html" aria-label="Página inicial">
+        <img class="header-logo" src="../img/logo-emporio.png" alt="Logo Empório La Tavola">
+      </a>
+
+      <input class="barra-pesquisa" type="search" placeholder="Buscar produtos...">
+
+      <div class="header-acoes">
+        <a class="link-header" href="localizacao.html">
+          <img class="icone-header" src="../img/icone-localizacao.png" alt="Localização">
+          <span>Nossas Lojas</span>
+        </a>
+        <a class="link-header" href="login.html">
+          <img class="icone-header" src="../img/icone-login.png" alt="Login">
+          <span>Login &amp; Cadastro</span>
+        </a>
+      </div>
+
+    </div>
+
+
+
+    <nav class="nav-principal" aria-label="Categorias"><!-- ----Barra de Navegação---- -->
+
+      <button class="btn-hamburguer" onclick="toggleMenu()" aria-label="Abrir menu"><!-- ----!!!!!!Fazer menu hamburguer!!!!!!---- -->
+        <span></span><span></span><span></span>
+      </button>
+      <a href="geleias.html" class="link-nav">Geleias</a>
+      <a href="sucos.html" class="link-nav">Sucos</a>
+      <a href="queijos.html" class="link-nav">Queijos</a>
+      <a href="paes.html" class="link-nav">Pães</a>
+      <a href="vinhos.html" class="link-nav">Vinhos</a>
+      <a href="destilados.html" class="link-nav">Destilados</a>
+      <a href="conservas.html" class="link-nav">Conservas</a>
+
+    </nav><!-- ----Barra de Navegação---- -->
+
+
+
+    <!-- Menu mobile: controlado pelo JS da página ou script inline -->
+    <div id="menu">
+      <a href="geleias.html">Geleias</a>
+      <a href="sucos.html">Sucos</a>
+      <a href="queijos.html">Queijos</a>
+      <a href="paes.html">Pães</a>
+      <a href="vinhos.html">Vinhos</a>
+      <a href="destilados.html">Destilados</a>
+      <a href="conservas.html">Conservas</a>
+    </div>
+
+
+
+  </header>
+  <!--________________________________________________ Fim do Header ________________________________________________ -->
+
+
+
+
+  <!--________________________________________________ Começo do Main ________________________________________________ -->
+  <main class="pagina-login">
+    <section class="card-login">
+
+    <p id="nomeUsuario"></p>
+
+    </section>
+  </main>
+  <!--________________________________________________ Fim do Main ________________________________________________ -->
+
+
+
+  
+
+  <!--________________________________________________ Começo do Footer ________________________________________________ -->
+  <footer class="site-footer">
+    <div class="footer-logo-area">
+      <img class="footer-logo" src="../img/logo-emporio.png" alt="Logo La Tavola">
+    </div>
+
+    <div class="footer-grid">
+      <div class="footer-coluna">
+
+        <h4>Contato</h4>
+
+        <div class="footer-redes-sociais">
+          <img src="../img/logo-facebook.png" alt="Facebook">
+          <img src="../img/logo-instagram.png" alt="Instagram">
+        </div>
+
+        <p>Segunda à sexta das 08h00 às 18h00</p>
+
+        <div class="footer-contato-item">
+          <img src="../img/icone-email.png" alt="Email">
+          <span>latavola@gmail.com.br</span>
+        </div>
+
+        <div class="footer-contato-item">
+          <img src="../img/logo-whatsapp.png" alt="WhatsApp">
+          <span>+55 (19) 9999-9999</span>
+        </div>
+
+      </div>
+
+      <div class="footer-coluna">
+        <h4>Institucional</h4>
+        <a href="#">Atendimento</a>
+        <a href="#">Quem Somos</a>
+        <a href="#">Compra Segura</a>
+        <a href="#">Como Comprar</a>
+        <a href="#">Política de Entrega</a>
+        <a href="#">Política de Trocas e Devoluções</a>
+        <a href="#">Política de Privacidade</a>
+        <a href="#">Avaliações</a>
+      </div>
+
+      <div class="footer-coluna footer-pagamentos">
+        <h4>Formas de Pagamento</h4>
+        <div class="logos-pagamento">
+          <img src="../img/logo-mastercard.png" alt="Mastercard">
+          <img src="../img/logo-boleto.png" alt="Boleto">
+          <img src="../img/logo-elo.png" alt="Elo">
+          <img src="../img/logo-pix.png" alt="Pix">
+          <img src="../img/logo-visa.png" alt="Visa">
+        </div>
+
+        <h4>Selos de Segurança</h4>
+
+        <div class="logos-seguranca">
+          <img src="../img/google-site-seguro.png" alt="Google Site Seguro">
+        </div>
+
+      </div>
+    </div>
+
+    <hr class="footer-divisor">
+
+    <div class="footer-copy">
+      Latavola | CNPJ: 41.628.257/0002-00 © Direitos Reservados www.latavola.com.br
+    </div>
+
+  </footer>
+  <!--________________________________________________ Fim do Footer ________________________________________________ -->
+
+
+  <script src="../JS/perfil.js"></script>
+
+
+</body>
+</html>
