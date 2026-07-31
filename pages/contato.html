@@ -3,17 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Contato - La Tavola</title>
+  
+  <title>Contate-nos - La Tavola</title>
 
   <link rel="icon" href="../icon/logo-emporio.ico" type="image/ico">
-  <link rel="stylesheet" href="../CSS/contato/contato.css">
+  <link rel="stylesheet" href="../CSS/envio-email/contate-nos.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
 </head>
 
-<body>
+<body> <!--________ Começo do Body ________ -->
+
+  <!--________________________________________________ Começo Header ________________________________________________ -->
     <header class="site-header" style="position:relative;">
+
     <div class="header-container">
 
       <a href="../index.html" aria-label="Página inicial">
@@ -37,12 +41,12 @@
 
 
 
-
     <nav class="nav-principal" aria-label="Categorias"><!-- ----Barra de Navegação---- -->
 
-      <button class="btn-hamburguer" onclick="toggleMenu()" aria-label="Abrir menu"><!-- ----!!!!!!Fazer menu hamburguer!!!!!!---- -->
+      <button class="btn-hamburguer" onclick="toggleMenu()" aria-label="Abrir menu"> <!-- ----!!!!!!Fazer menu hamburguer!!!!!!---- -->
         <span></span><span></span><span></span>
       </button>
+
       <a href="geleias.html" class="link-nav">Geleias</a>
       <a href="sucos.html" class="link-nav">Sucos</a>
       <a href="queijos.html" class="link-nav">Queijos</a>
@@ -52,9 +56,6 @@
       <a href="conservas.html" class="link-nav">Conservas</a>
 
     </nav><!-- ----Barra de Navegação---- -->
-
-
-
 
 
 
@@ -68,28 +69,78 @@
       <a href="destilados.html">Destilados</a>
       <a href="conservas.html">Conservas</a>
     </div>
+
   </header>
+  <!--________________________________________________ Fim Header ________________________________________________ -->
 
 
 
 
-  <main class="pagina-conteudo">
-    <!-- Conteúdo de Contato -->
-  </main>
+
+  <!--________________________________________________ Começo do Main ________________________________________________ -->
+  <main class="pagina-envio-email"> <!--________ Conteudo da Pagina Cadastro ________ -->
+
+    <section class="card-envio-email">
+      <h1>Contate-nos via e-mail</h1>
+      <p>Preencha os campos e envie seu problema ou sugestão!</p>
+
+      <!-- id="formCadastro" obrigatório para o JS funcionar -->
+      <form id="formEnvioEmail" class="formulario-envio-email">
+
+        <div class="campo-formulario">
+          <label for="email">Seu e-mail: </label>
+          <p id="emailUsuario"></p>
+        </div>
+
+        <div class="campo-formulario">
+          <label for="nome">Seu nome: </label>
+          <p id="nomeUsuario"></p>
+        </div>
+
+        <br>
+
+        <div class="campo-formulario">
+          <label for="titulo">Título do e-mail</label>
+          <input type="text" id="tituloEmail" name="titulo" placeholder="Digite o título">
+        </div>
+
+        <div class="campo-formulario">
+          <label for="assunto">Assunto</label>
+          <!-- <input type="text" id="assuntoEmail" name="assunto" placeholder="Informe sua ocorrência"> -->
+          <textarea name="assunto" id="assuntoEmail" placeholder="Informe sua ocorrência"></textarea>
+        </div>
+
+        <!-- mensagem injetada pelo JS via mostrarMensagem() -->
+        <div id="mensagem" class="mensagem" role="alert" aria-live="polite"></div>
+        <button type="submit" class="btn-cadastrar">Cadastrar</button>
+      </form>
+
+      <div class="divisor-formulario"><span></span></div>
+
+    </section>
+
+  </main><!--________ Conteudo da Pagina Cadastro ________ -->
+  <!--________________________________________________ Final do Main ________________________________________________ -->
 
 
 
+
+
+
+  <!--________________________________________________ Começo do Footer ________________________________________________ -->
 
   <footer class="site-footer">
+
     <div class="footer-logo-area">
       <img class="footer-logo" src="../img/logo-emporio.png" alt="Logo La Tavola">
     </div>
 
-    <div class="footer-grid"><!------ footer-grid ------>
+    <div class="footer-grid">
 
       <div class="footer-coluna">
 
         <h4>Contato</h4>
+
         <div class="footer-redes-sociais">
           <img src="../img/logo-facebook.png" alt="Facebook">
           <img src="../img/logo-instagram.png" alt="Instagram">
@@ -109,7 +160,7 @@
 
       </div>
 
-      <div class="footer-coluna">
+      <div class="footer-coluna"><!-- Links da coluna "Institucional" no Footer: Atendimento, Quem Somos, Avaliações, etc.... -->
         <h4>Institucional</h4>
         <a href="#">Atendimento</a>
         <a href="#">Quem Somos</a>
@@ -119,10 +170,10 @@
         <a href="#">Política de Trocas e Devoluções</a>
         <a href="#">Política de Privacidade</a>
         <a href="#">Avaliações</a>
-      </div>
+      </div><!-- Não sera feito as paginas, é apenas decorativo!!! (Talves Futuramente para terminar o projeto completamente :D)-->
 
       <div class="footer-coluna footer-pagamentos">
-        
+
         <h4>Formas de Pagamento</h4>
 
         <div class="logos-pagamento">
@@ -134,29 +185,34 @@
         </div>
 
         <h4>Selos de Segurança</h4>
+
         <div class="logos-seguranca">
           <img src="../img/google-site-seguro.png" alt="Google Site Seguro">
         </div>
 
       </div>
 
-    </div><!------ footer-grid ------>
+    </div>
 
-
-
-    <hr class="footer-divisor">
-
-
-
-    <div class="footer-copy">
+    <hr class="footer-divisor"> <!----------Barra divisoria do Copyright no Footer---------->
+       
+    <div class="footer-copy"> <!-------Copyright------->
       Latavola | CNPJ: 41.628.257/0002-00 © Direitos Reservados www.latavola.com.br
     </div>
 
+    
   </footer>
+  <!--________________________________________________ Final do Footer ________________________________________________ -->
 
 
+  <script src="../JS/envio-email.js">
+
+    document.getElementById('emailUsuario').textContent = sessionStorage.getItem('usuarioEmail')
+    document.getElementById('nomeUsuario').textContent = sessionStorage.getItem('usuarioNome')
+    
+  </script><!--________ Link pro JavaScript ________ -->
   <script src="../JS/contato/contato.js"></script>
 
 
-</body>
+</body> <!--________ Final do Body ________ -->
 </html>
