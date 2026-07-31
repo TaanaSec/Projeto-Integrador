@@ -24,7 +24,20 @@ exports.cadastro = async (req, res) => {
 
         const novoLogin = new login({ nome, email, senha: senhaHash })
         await novoLogin.save()
-        res.status(201).json(novoLogin)
+
+        // TOKEN
+        const token = jwt.sign({ id: novoLogin._id }, process.env.SECRET, {
+            expiresIn: "60s"
+        })
+
+        res.status(201).json({
+            token,
+            usuario: {
+                id: novoLogin._id,
+                nome: novoLogin.nome,
+                email: novoLogin.email
+            }
+        })
 
         // Envio de e-mail de boas-vindas
         try {
@@ -84,16 +97,11 @@ exports.login = async (req, res) => {
             return res.status(401).json({ erro: "Credenciais inválidas!" })
         }
 
+
         // TOKEN
         const token = jwt.sign({ id: usuario._id }, process.env.SECRET, {
-            expiresIn: "10s"
+            expiresIn: "60s"
         })
-
-        // res.status(200).json({
-        //     msg: "Autenticação realizada com sucesso!",
-        //     token,
-        //     id: usuario._id
-        // })
 
         res.status(200).json({
             msg: "Autenticação realizada com sucesso!",
@@ -108,4 +116,14 @@ exports.login = async (req, res) => {
     } catch (error) {
         res.status(500).json({ erro: "Erro ao realizar login" })
     }
+}
+
+// Perfil do usuário
+exports.perfil = async (req, res) => {
+
+    const usuario = await login.findById(
+        req.usuarioId
+    )
+
+    res.status(200).json(usuario)
 }

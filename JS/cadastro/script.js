@@ -67,12 +67,13 @@ document.getElementById('formCadastro')?.addEventListener('submit', async (event
         }
 
         sessionStorage.setItem(
+            'token',
+            data.token
+        )
+
+        sessionStorage.setItem(
             'usuarioLogado',
-            JSON.stringify({
-                id: data._id,
-                nome: data.nome,
-                email: data.email
-            })
+            JSON.stringify(data.usuario)
         )
 
         if (response.ok) {

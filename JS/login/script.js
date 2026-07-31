@@ -42,7 +42,7 @@ document.getElementById('formLogin')?.addEventListener('submit', async (event) =
             JSON.stringify(data.usuario)
         )
 
-        mostrarMensagem("Login realizado! Redirecionando...', 'sucesso")
+        mostrarMensagem('Login realizado! Redirecionando...', 'sucesso')
         setTimeout(() => {window.location.href = '../index.html'}, 1500)
         
     } catch (error) {
