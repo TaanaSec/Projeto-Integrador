@@ -88,13 +88,13 @@
       <form id="formEnvioEmail" class="formulario-envio-email">
 
         <div class="campo-formulario">
-          <label for="email">Seu e-mail: </label>
-          <p id="emailUsuario"></p>
+          <label for="nome">Seu nome: </label>
+          <p id="nomeUsuario"></p>
         </div>
 
         <div class="campo-formulario">
-          <label for="nome">Seu nome: </label>
-          <p id="nomeUsuario"></p>
+          <label for="email">Seu e-mail: </label>
+          <p id="emailUsuario"></p>
         </div>
 
         <br>
@@ -106,7 +106,6 @@
 
         <div class="campo-formulario">
           <label for="assunto">Assunto</label>
-          <!-- <input type="text" id="assuntoEmail" name="assunto" placeholder="Informe sua ocorrência"> -->
           <textarea name="assunto" id="assuntoEmail" placeholder="Informe sua ocorrência"></textarea>
         </div>
 
@@ -205,12 +204,8 @@
   <!--________________________________________________ Final do Footer ________________________________________________ -->
 
 
-  <script src="../JS/envio-email.js">
-
-    document.getElementById('emailUsuario').textContent = sessionStorage.getItem('usuarioEmail')
-    document.getElementById('nomeUsuario').textContent = sessionStorage.getItem('usuarioNome')
-    
-  </script><!--________ Link pro JavaScript ________ -->
+  <script src="../JS/envio-email.js"></script><!--________ Link pro JavaScript ________ -->
+  <script src="../JS/contato/contato.js"></script>
 
 
 </body> <!--________ Final do Body ________ -->

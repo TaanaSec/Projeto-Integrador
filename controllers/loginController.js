@@ -127,3 +127,13 @@ exports.perfil = async (req, res) => {
 
     res.status(200).json(usuario)
 }
+
+// Página de contato do usuário via e-mail
+exports.contato = async (req, res) => {
+
+    const usuario = await login.findById(
+        req.usuarioId
+    )
+
+    res.status(200).json(usuario)
+}

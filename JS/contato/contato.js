@@ -4,7 +4,7 @@ if (!token) {
     window.location.href = '../pages/login.html'
 }
 
-fetch('http://localhost:3000/perfil', {
+fetch('http://localhost:3000/contato', {
     method: 'GET',
     headers: {
         Authorization: `Bearer ${token}`
