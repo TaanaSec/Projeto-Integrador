@@ -37,13 +37,11 @@ fetch('http://localhost:3000/contato', {
 
 // Função de enviar o e-mail
 function enviarEmail() {
-    const para = document.getElementById('para').value
-    const assunto = document.getElementById('assunto').value
-    const texto = document.getElementById('texto').value
-    const html = document.getElementById('html').value
+    const tituloEmail = document.getElementById('tituloEmail').value
+    const assuntoEmail = document.getElementById('assuntoEmail').value
 
-    if (!para || !assunto || !texto || !html) {
-        mostrarMensagem("Pro favor, preencha todos os campos.", 'erro')
+    if (!tituloEmail || !assuntoEmail) {
+        mostrarMensagem("Por favor, preencha todos os campos.", 'erro')
         return
     }
 
@@ -53,7 +51,7 @@ function enviarEmail() {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}}`
         },
-        body: JSON.stringify({ para, assunto, texto, html })
+        body: JSON.stringify({ tituloEmail, assuntoEmail })
     })
     .then(res => {
         if (res.ok) {

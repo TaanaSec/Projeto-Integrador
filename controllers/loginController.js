@@ -3,6 +3,7 @@ const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const dotenv = require('dotenv')
 const nodemailer = require('nodemailer')
+const auth = require('../middlewares/auth')
 dotenv.config()
 
 // Cadastrar (nome, email, senha)
@@ -136,4 +137,36 @@ exports.contato = async (req, res) => {
     )
 
     res.status(200).json(usuario)
+}
+
+exports.envioEmail = async (req, res) => {
+    const { tituloEmail, assuntoEmail} = req.body
+    const textPadrao = `Email do cliente ${usuario.nome} - reclamação`
+
+    if (!tituloEmail || !assuntoEmail) {
+        return res.status(400).json({ "Por favor, preencha todos os campos para encaminhar o e-mail." })
+    }
+
+    try {
+        const transportador = nodemailer.createTransport({
+            host: process.env.SMTP_HOST,
+            port: process.env.SMTP_PORT,
+            secure: process.env.SMTP_SECURE === 'true',
+            auth: {
+                user: process.env.SMTP_USER,
+                pass: process.env.SMTP_PASS
+            },
+        })
+
+        const info = await transportador.sendMail({
+            from: process.env.SMTP_FROM || process.env.SMTP_USER,
+            to: usuario.email,
+            subject: tituloEmail,
+            text: textPadrao,
+            html: assuntoEmail
+        })
+        res.status(200).json({ msg: "E-mail enviado com sucesso! ", info })
+    } catch (erro) {
+        res.status(500).json({ msg: "Erro ao enviar e-mail ", erro: erro.message})
+    }
 }
