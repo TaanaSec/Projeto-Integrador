@@ -1,0 +1,35 @@
+@import url("../Global/global.css");
+
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+    /* Botão Hamburguer */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: 0.3s;
+}
+    
+    /* Animação do hamburguer quando ativo */
+.hamburger.ativo span:nth-child(1) {
+  transform: rotate(45deg) translate(10px, 10px);
+}
+
+.hamburger.ativo span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.ativo span:nth-child(3) {
+  transform: rotate(-45deg) translate(8px, -8px);
+}
