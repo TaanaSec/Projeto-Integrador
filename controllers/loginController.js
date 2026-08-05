@@ -140,11 +140,14 @@ exports.contato = async (req, res) => {
 }
 
 exports.envioEmail = async (req, res) => {
+    const usuario = await login.findById(
+        req.usuarioId
+    )
     const { tituloEmail, assuntoEmail} = req.body
     const textPadrao = `Email do cliente ${usuario.nome} - reclamação`
 
     if (!tituloEmail || !assuntoEmail) {
-        return res.status(400).json({ "Por favor, preencha todos os campos para encaminhar o e-mail." })
+        return res.status(400).json({ msg: "Por favor, preencha todos os campos para encaminhar o e-mail." })
     }
 
     try {
