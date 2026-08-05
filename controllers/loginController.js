@@ -101,7 +101,7 @@ exports.login = async (req, res) => {
 
         // TOKEN
         const token = jwt.sign({ id: usuario._id }, process.env.SECRET, {
-            expiresIn: "60s"
+            expiresIn: "240s"
         })
 
         res.status(200).json({
@@ -143,10 +143,10 @@ exports.envioEmail = async (req, res) => {
     const usuario = await login.findById(
         req.usuarioId
     )
-    const { tituloEmail, assuntoEmail} = req.body
+    const { tituloEmail, mensagemEmail} = req.body
     const textPadrao = `Email do cliente ${usuario.nome} - reclamação`
 
-    if (!tituloEmail || !assuntoEmail) {
+    if (!tituloEmail || !mensagemEmail) {
         return res.status(400).json({ msg: "Por favor, preencha todos os campos para encaminhar o e-mail." })
     }
 

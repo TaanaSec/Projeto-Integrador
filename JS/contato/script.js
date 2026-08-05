@@ -36,11 +36,13 @@ fetch('http://localhost:3000/contato', {
 
 
 // Função de enviar o e-mail
-function enviarEmail() {
-    const tituloEmail = document.getElementById('tituloEmail').value
-    const assuntoEmail = document.getElementById('assuntoEmail').value
+document.getElementById('formEnvioEmail')?.addEventListener('submit', async (event) => {
+    event.preventDefault()
 
-    if (!tituloEmail || !assuntoEmail) {
+    const tituloEmail = document.getElementById('tituloEmail').value
+    const mensagemEmail = document.getElementById('mensagemEmail').value
+
+    if (!tituloEmail || !mensagemEmail) {
         mostrarMensagem("Por favor, preencha todos os campos.", 'erro')
         return
     }
@@ -49,9 +51,9 @@ function enviarEmail() {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${token}}`
+            Authorization: `Bearer ${token}`
         },
-        body: JSON.stringify({ tituloEmail, assuntoEmail })
+        body: JSON.stringify({ tituloEmail, mensagemEmail })
     })
     .then(res => {
         if (res.ok) {
@@ -62,4 +64,4 @@ function enviarEmail() {
         console.error("Erro ao enviar email:", error)
         mostrarMensagem("Erro ao enviar email.", 'erro')
     })
-}
+})
