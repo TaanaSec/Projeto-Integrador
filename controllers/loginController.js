@@ -162,11 +162,19 @@ exports.envioEmail = async (req, res) => {
         })
 
         const info = await transportador.sendMail({
-            from: process.env.SMTP_FROM || process.env.SMTP_USER,
-            to: usuario.email,
+            from: process.env.SMTP_USER,
+            to: process.env.SMTP_USER,
+            replyTo: usuario.email,
             subject: tituloEmail,
             text: textPadrao,
-            html: assuntoEmail
+            html: `
+                <p><strong>Cliente: </strong>${usuario.nome}</p>
+                <p><strong>Email: </strong>${usuario.email}</p>
+
+                <hr>
+
+                <p><strong>Mensagem: </strong>${mensagemEmail}</p>
+            `
         })
         res.status(200).json({ msg: "E-mail enviado com sucesso! ", info })
     } catch (erro) {
