@@ -1,35 +1,29 @@
 @import url("../Global/global.css");
 
-.logo {
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
+.menuHamburguer {
+  list-style: none; /* Remove os marcadores da lista */
+  padding: 20px; /* Espaçamento interno */
+  margin: 0; /* Remove margens padrão */
+  display: none; /* Esconde o menu por padrão */
+  background-color: #f8f8f8; /* Cor de fundo clara */
+  position: absolute; /* Posiciona o menu em relação ao container */
+  top: 50px; /* Distância do topo do container */
+  left: 0; /* Alinha à esquerda */
+  width: 200px; /* Largura fixa do menu */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra para dar profundidade */
 }
 
-    /* Botão Hamburguer */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
+.menuHamburguer li {
+  border-bottom: 1px solid #ddd; /* Linha divisória entre os itens */
 }
 
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  transition: 0.3s;
-}
-    
-    /* Animação do hamburguer quando ativo */
-.hamburger.ativo span:nth-child(1) {
-  transform: rotate(45deg) translate(10px, 10px);
+.menuHamburguer li a {
+  display: block; /* Ocupa toda a largura do item */
+  padding: 10px; /* Espaçamento interno para facilitar o clique */
+  text-decoration: none; /* Remove sublinhado padrão */
+  color: #5b3c3c; /* Cor do texto (marrom escuro) */
 }
 
-.hamburger.ativo span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.ativo span:nth-child(3) {
-  transform: rotate(-45deg) translate(8px, -8px);
+.menuHamburguer li a:hover {
+  background-color: #eee; /* Cor de fundo mais clara ao passar o mouse */
 }

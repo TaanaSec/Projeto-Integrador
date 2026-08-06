@@ -1,7 +1,4 @@
-// Função que mostra ou esconde o menu quando chamada
-function toggleMenu() { // "toggleMenu" é um nome escolhido pelo programador
-
-  // Pega o elemento HTML com o ID "menu"
+function menuHamburguer() {
   const menuHamburguer = document.getElementById("menuHamburguer");
 
   menuHamburguer.addEventListener("click", function() {
