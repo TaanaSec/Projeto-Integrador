@@ -3,60 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Painel Admin</title>
+  <title>Painel</title>
 
   <link rel="icon" href="../icon/logo-emporio.ico" type="image/ico">
-  <link rel="stylesheet" href="../CSS/restrict/restrict.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+  <link rel="stylesheet" href="../CSS/restrict/restrict.css">
 </head>
 
 <body>
-    <!--________________________________________________ Começo do Header ________________________________________________ -->
-    <header class="site-header" style="position:relative;">
 
-    <div class="menuHamburguer">
-        <div class="hamburger" onclick="menu()"><!--☰-->
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+  <!-- ════════════════════════════════════════ HEADER ════════════════════════════════════════ -->
+  <header class="site-header">
+    <h1 class="header-title">Painel Empório</h1>
 
-        <ul class="menu" id="menu">
-            <li><a href="#quemsomos">Quem Somos</a></li>
-            <li><a href="#produtos">Produtos</a></li>
-            <li><a href="#parceiros">Parceiros</a></li>
-            <li><a href="#contato">Contato</a></li>
-        </ul>
+    <div class="menu-container">
+      <button class="btn-hamburguer" id="btnHamburguer" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="menu-dropdown" id="menuDropdown">
+        <a href="#dashboard">Dashboard</a>
+        <a href="#relatorios">Relatórios</a>
+        <a href="#estatisticas">Estatísticas</a>
+        <a href="#usuarios">Usuários</a>
+        <hr>
+
+        <button id="btnConfiguracoes" type="button">
+            <img src="../img/icone-configuracoes.png" alt="Configurações">
+            <span>Configurações</span>
+        </button>
+
+        <button id="btnSair" type="button">
+            <img src="../img/icone-sair-logout.png" alt="Sair da Conta">
+            <span>Sair da Conta</span>
+        </button>
+      </nav>
+    </div>
+
+    <div class="container-perfil">
+        <a class="link-perfil" href="../pages/perfil.html">
+          <img class="icone-perfil" src="../img/icone-login.png" alt="Área do Perfil"> <!--Fazer aparecer foto do perfil da pessoa-->
+          <span>Perfil</span>
+        </a>
     </div>
 
   </header>
-  <!--________________________________________________ Fim do Header ________________________________________________ -->
 
-
-
-
-  <!--________________________________________________ Começo do Main ________________________________________________ -->
+  <!-- ════════════════════════════════════════ MAIN ════════════════════════════════════════ -->
   <main class="pagina-restrita">
     
   </main>
-  <!--________________________________________________ Fim do Main ________________________________________________ -->
 
-
-
-  
-
-  <!--________________________________________________ Começo do Footer ________________________________________________ -->
+  <!-- ════════════════════════════════════════ FOOTER ════════════════════════════════════════ -->
   <footer class="site-footer">
     
   </footer>
-  <!--________________________________________________ Fim do Footer ________________________________________________ -->
 
-
-  <script src="../JS/restrict/menuLateral.js"></script>
-
-
+  <script src="../JS/restrict/menuHamburguer.js"></script>
+  <script src="../JS/restrict/logout.js"></script>
 </body>
 </html>
