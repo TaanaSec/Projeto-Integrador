@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel</title>
+
+  <link rel="icon" href="/icon/logo-emporio.ico" type="image/ico">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+  <link rel="stylesheet" href="/CSS/restrict/restrict.css">
+</head>
+
+<body>
+
+  <!-- ════════════════════════════════════════ HEADER ════════════════════════════════════════ -->
+  <header class="site-header">
+    <a href="/pages/Restrito/restrict.html"><h1 class="header-title">Painel Empório</h1></a>
+
+    <div class="menu-container">
+      <button class="btn-hamburguer" id="btnHamburguer" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="menu-dropdown" id="menuDropdown">
+
+        <a href="/pages/Restrito/dashboard.html" class="link-dashboard">
+            <img src="/img/icone-dashboard.png" alt="dashboard">
+            <span>Dashboard</span>
+        </a>
+
+        <a href="/pages/Restrito/relatorios.html" class="link-relatorios">
+            <img src="/img/icone-relatorios.png" alt="relatorios">
+            <span>Relatórios</span>
+        </a>
+        
+        <a href="/pages/Restrito/estatisticas.html" class="link-estatisticas">
+            <img src="/img/icone-estatisticas.png" alt="estatisticas">
+            <span>Estatísticas</span>
+        </a>    
+        
+        <a href="/pages/Restrito/usuarios.html" class="link-usuarios">
+            <img src="/img/icone-usuarios.png" alt="usuarios">
+            <span>Usuários</span>
+        </a>
+
+        <a href="/pages/Restrito/configuracoes.html" class="link-configuracoes">
+            <img src="/img/icone-configuracoes.png" alt="Configurações">
+            <span>Configurações</span>
+        </a>
+
+        <hr>
+        
+        <button id="btnSair" type="button">
+          <img src="/img/icone-sair-logout.png" alt="Sair da Conta">
+          <span>Sair da Conta</span>
+        </button>
+        
+      </nav>
+    </div>
+
+    <div class="container-perfil">
+        <a class="link-perfil" href="/pages/perfil.html">
+          <img class="icone-perfil" src="/img/icone-login.png" alt="Área do Perfil"> <!--Fazer aparecer foto do perfil da pessoa-->
+          <span>Perfil</span>
+        </a>
+    </div>
+
+  </header>
+
+  <!-- ════════════════════════════════════════ MAIN ════════════════════════════════════════ -->
+  <main class="painel">
+
+  </main>
+
+  <!-- ════════════════════════════════════════ FOOTER ════════════════════════════════════════ -->
+  <footer class="site-footer">
+    
+  </footer>
+
+  <script src="/JS/restrict/menuHamburguer.js"></script>
+  <script src="/JS/restrict/logout.js"></script>
+
+</body>
+</html>
