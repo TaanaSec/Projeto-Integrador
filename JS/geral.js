@@ -14,3 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     linkPerfil.href = '../pages/perfil.html'
 })
+
+// Botão de deslogar
+document.getElementById('btnLogout').addEventListener('click', () => {
+    sessionStorage.clear()
+
+    window.location.href = '../pages/login.html'
+})
