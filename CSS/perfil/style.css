@@ -45,6 +45,52 @@
   gap: 16px;
 } */
 
+
+/* Menu Lateral */
+.menu-perfil {
+  width: 250px;
+  padding: 30px;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 4px 24px rgba(0,0,0,.08);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.menu-perfil a {
+  text-decoration: none;
+  color: #7c6e52;
+  font-weight: 500;
+  padding: 10px;
+}
+
+.menu-perfil a:hover {
+  color: #a50000;
+}
+
+.item-menu.ativo {
+  color: #a50000;
+  border-left: 4px solid #a50000;
+  padding-left: 12px;
+}
+
+
+/* Avatar Perfil */
+.avatar-perfil {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.avatar-perfil img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid #d6d6d6;
+}
+
+
 /* ── CAMPOS DE FORMULÁRIO ── */
 .campo-formulario {
   display: flex;
@@ -82,24 +128,6 @@
   font-size: 13px;
 }
 
-/* ── OPÇÕES ── */
-.opcoes-login {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #7c6e52;
-  font-family: 'Poppins', sans-serif;
-  font-size: 12px;
-}
-
-.opcoes-login a {
-  color: #a50000;
-  font-weight: 500;
-  text-decoration: none;
-  transition: opacity 0.2s;
-}
-
-.opcoes-login a:hover { opacity: 0.75; }
 
 /* ── MENSAGEM DE FEEDBACK ── */
 .mensagem {
@@ -185,6 +213,18 @@
 }
 
 .link-cadastro a:hover { opacity: 0.75; } */
+
+@media (max-width: 900px){
+  .pagina-perfil{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-perfil{
+    width: 100%;
+    max-width: 440px;
+  }
+}
 
 @media (max-width: 520px) {
   .card-perfil { padding: 32px 20px; }
