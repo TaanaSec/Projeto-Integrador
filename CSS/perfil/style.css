@@ -99,33 +99,43 @@
 }
 
 .campo-formulario label {
-  color: #3b2f1e;
+  display: block;
+  margin-bottom: 8px;
+  color: #4a4a4a; /* #3b2f1e */
   font-family: 'Poppins', sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
 }
 
 .campo-formulario input {
-  height: 44px;
-  padding: 0 16px;
-  border: 1.5px solid rgba(195, 195, 195, 0.97);
+  width: 100%;
+  height: 52px;
+  padding: 0 18px;
+  border: 1px solid #dddddd;
   border-radius: 10px;
   outline: none;
-  background-color: #faf8f5;
-  color: #3b2f1e;
+  background-color: #fff; /* #faf8f5 */
+  color: #333; /* #3b2f1e */
   font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .campo-formulario input:focus {
-  border-color: #7c6e52;
-  box-shadow: 0 0 0 3px rgba(124, 110, 82, 0.12);
+  border-color: #9d0000; /* #7c6e52 */
+  box-shadow: 0 0 0 3px rgba(157, 0, 0, 0.08); /* rgba(124, 110, 82, 0.12) */
+  outline: none;
 }
 
-.campo-formulario input::placeholder {
+/* .campo-formulario input::placeholder {
   color: rgba(124, 110, 82, 0.5);
   font-size: 13px;
+} */
+
+.info-perfil {
+  display: block;
+  flex-direction: column;
+  gap: 16px;
 }
 
 
@@ -154,7 +164,7 @@
 }
 
 /* ── BOTÃO ENTRAR ── */
-.btn-entrar {
+.btn-editar {
   width: 100%;
   height: 48px;
   margin-top: 4px;
@@ -169,10 +179,10 @@
   transition: background-color 0.2s, transform 0.1s;
 }
 
-.btn-entrar:hover { background-color: #5e5240; }
-.btn-entrar:active { transform: scale(0.98); }
+.btn-editar:hover { background-color: #5e5240; }
+.btn-editar:active { transform: scale(0.98); }
 
-.btn-entrar:disabled {
+.btn-editar:disabled {
   background-color: rgba(124, 110, 82, 0.45);
   cursor: not-allowed;
   transform: none;
