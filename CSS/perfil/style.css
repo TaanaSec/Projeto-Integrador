@@ -3,10 +3,12 @@
 /* ── PÁGINA PERFIL ── */
 .pagina-perfil {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  gap: 32px;
   min-height: calc(100vh - 130px);
   padding: 60px 16px;
+  min-height: 70vh;
   background-color: #f9f4f0;
 }
 
