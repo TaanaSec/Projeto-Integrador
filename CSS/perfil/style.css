@@ -1,6 +1,6 @@
 @import url("../Global/global.css");
 
-/* ── PÁGINA PERFIL ── */
+/* ── CARD PERFIL ── */
 .pagina-perfil {
   display: flex;
   align-items: flex-start;
@@ -14,7 +14,7 @@
 
 .card-perfil {
   width: 100%;
-  max-width: 440px;
+  max-width: 540px;
   padding: 48px 40px;
   border-radius: 16px;
   background-color: #fff;
@@ -118,7 +118,7 @@
   color: #333; /* #3b2f1e */
   font-family: 'Montserrat', sans-serif;
   font-size: 15px;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  transition: all 0.2s ease;
 }
 
 .campo-formulario input:focus {
@@ -169,8 +169,8 @@
   height: 48px;
   margin-top: 4px;
   border: none;
-  border-radius: 10px;
-  background-color: #7c6e52;
+  border-radius: 8px;
+  background-color: #8d0000; /* #7c6e52 */
   color: #fff;
   font-family: 'Poppins', sans-serif;
   font-size: 15px;
@@ -179,13 +179,69 @@
   transition: background-color 0.2s, transform 0.1s;
 }
 
-.btn-editar:hover { background-color: #5e5240; }
+.btn-editar:hover { background-color: #6f0000; }  /* #5e5240 */
 .btn-editar:active { transform: scale(0.98); }
 
 .btn-editar:disabled {
   background-color: rgba(124, 110, 82, 0.45);
   cursor: not-allowed;
   transform: none;
+}
+
+
+/* SEÇÃO PERFIL */
+.secao-perfil {
+  margin-top: 32px;
+  padding-top: 28px;
+  border-top: 1px solid #e5dfd8;
+}
+
+.secao-perfil h2 {
+  margin-bottom: 20px;
+  font-family: 'Libre Bodoni', serif;
+  font-size: 24px;
+  color: #3b2f1e;
+}
+
+.grid-endereco {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* .btn-salvar {
+  width: 100%;
+  height: 48px;
+  border: none;
+  border-radius: 8px;
+  background: #900000;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+.btn-salvar:hover {
+  background: #740000;
+} */
+
+
+/* Botão editar perfil */
+.btn-outline {
+  width: 100%;
+  height: 48px;
+  margin-top: 10px;
+  border: 1px solid #900000;
+  border-radius: 8px;
+  background: transparent;
+  color: #900000;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  background: #fff5f5;
 }
 
 /* ── DIVISOR ── */
@@ -240,3 +296,10 @@
   .card-perfil { padding: 32px 20px; }
   .card-perfil h1 { font-size: 22px; }
 }
+
+@media (max-width: 768px) {
+  .grid-endereco {
+    grid-template-columns: 1fr;
+  }
+}
+
