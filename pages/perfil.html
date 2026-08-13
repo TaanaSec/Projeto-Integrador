@@ -7,7 +7,7 @@
   <title>Login - La Tavola</title>
 
   <link rel="icon" href="../icon/logo-emporio.ico" type="image/ico">
-  <link rel="stylesheet" href="../CSS/login/login.css">
+  <link rel="stylesheet" href="../CSS/perfil/style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
@@ -29,9 +29,9 @@
           <img class="icone-header" src="../img/icone-localizacao.png" alt="Localização">
           <span>Nossas Lojas</span>
         </a>
-        <a class="link-header" href="login.html">
+        <a id="linkPerfil" class="link-header" href="login.html">
           <img class="icone-header" src="../img/icone-login.png" alt="Login">
-          <span>Login &amp; Cadastro</span>
+          <span id="perfilLogado">Login &amp; Cadastro</span>
         </a>
       </div>
 
@@ -76,14 +76,104 @@
 
 
   <!--________________________________________________ Começo do Main ________________________________________________ -->
-  <main class="pagina-login">
-    <section class="card-login">
+<main class="pagina-perfil">
+  <section class="card-perfil">
 
-    <p id="nomeUsuario"></p>
-    <p id="emailUsuario"></p>
+    <h1>Meu Perfil</h1>
+    <p>Gerencie suas informações pessoais.</p>
 
-    </section>
-  </main>
+    <div class="avatar-perfil">
+      <img src="../img/icone-usuario.png" alt="Usuário">
+    </div>
+
+    <div class="info-perfil">
+
+      <div class="campo-formulario">
+        <label>Nome Completo</label>
+        <input type="text" id="nomeUsuario" readonly>
+      </div>
+
+      <div class="campo-formulario">
+        <label>E-mail</label>
+        <input type="email" id="emailUsuario" readonly>
+      </div>
+
+      <div class="campo-formulario">
+        <label>Cliente desde</label>
+        <input type="text" id="dataCadastro" readonly>
+      </div>
+
+    </div>
+
+    <button class="btn-perfil">
+      Editar Perfil
+    </button>
+
+    <div class="secao-perfil">
+      <h2>Endereço Padrão</h2>
+
+      <div class="grid-endereco">
+        <div class="campo-formulario">
+          <label>Rua</label>
+          <input type="text">
+        </div>
+
+        <div class="campo-formulario">
+          <label>Número</label>
+          <input type="text">
+        </div>
+
+        <div class="campo-formulario">
+          <label>Complemento</label>
+          <input type="text">
+        </div>
+
+        <div class="campo-formulario">
+          <label>Bairro</label>
+          <input type="text">
+        </div>
+
+        <div class="campo-formulario">
+          <label>Cidade</label>
+          <input type="text">
+        </div>
+
+        <div class="campo-formulario">
+          <label>Estado</label>
+          <input type="text">
+        </div>
+
+        <div class="campo-formulario">
+          <label>CEP</label>
+          <input type="text">
+        </div>
+
+      </div>
+
+      <button class="btn-endereco">
+        Editar Endereço
+      </button>
+    </div>
+
+  </section>
+
+
+  <aside class="menu-perfil">
+
+    <a href="/pages/perfil.html">
+      Meus Pedidos
+    </a>
+
+    <a href="contato.html">
+      Fale Conosco
+    </a>
+
+    <a href="#" id="btnLogout">
+      Sair
+    </a>
+
+  </aside>
+</main>
   <!--________________________________________________ Fim do Main ________________________________________________ -->
 
 
@@ -161,7 +251,8 @@
   <!--________________________________________________ Fim do Footer ________________________________________________ -->
 
 
-  <script src="../JS/perfil.js"></script>
+  <script src="../JS/perfil/script.js"></script>
+  <script src="../JS/geral.js"></script>
 
 
 </body>
