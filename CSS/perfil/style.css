@@ -14,7 +14,7 @@
 
 .card-perfil {
   width: 100%;
-  max-width: 540px;
+  max-width: 580px;
   padding: 48px 40px;
   border-radius: 16px;
   background-color: #fff;
@@ -28,7 +28,7 @@
   margin-bottom: 4px;
   color: #3b2f1e;
   font-family: 'Libre Bodoni', serif;
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 700;
 }
 
@@ -36,7 +36,11 @@
   margin-bottom: 20px;
   color: #7c6e52;
   font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
+}
+
+.card-perfil h1, p {
+  margin: auto;
 }
 
 /* .formulario-login {
@@ -80,12 +84,12 @@
 .avatar-perfil {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  margin: 20px 0px;
 }
 
 .avatar-perfil img {
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   border: 2px solid #d6d6d6;
 }
@@ -100,16 +104,16 @@
 
 .campo-formulario label {
   display: block;
-  margin-bottom: 8px;
+  margin-top: 16px;
   color: #4a4a4a; /* #3b2f1e */
   font-family: 'Poppins', sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
 }
 
 .campo-formulario input {
   width: 100%;
-  height: 52px;
+  height: 48px;
   padding: 0 18px;
   border: 1px solid #dddddd;
   border-radius: 10px;
@@ -117,11 +121,11 @@
   background-color: #fff; /* #faf8f5 */
   color: #333; /* #3b2f1e */
   font-family: 'Montserrat', sans-serif;
-  font-size: 15px;
+  font-size: 14px;
   transition: all 0.2s ease;
 }
 
-.campo-formulario input:focus {
+.campo-formulario input:focus:not([readonly]) {
   border-color: #9d0000; /* #7c6e52 */
   box-shadow: 0 0 0 3px rgba(157, 0, 0, 0.08); /* rgba(124, 110, 82, 0.12) */
   outline: none;
@@ -136,6 +140,10 @@
   display: block;
   flex-direction: column;
   gap: 16px;
+}
+
+.info-perfil #dataCadastro {
+  background-color: rgba(124, 110, 82, 0.12);
 }
 
 
@@ -164,10 +172,10 @@
 }
 
 /* ── BOTÃO ENTRAR ── */
-.btn-editar {
+.btn-perfil {
   width: 100%;
   height: 48px;
-  margin-top: 4px;
+  margin-top: 18px;
   border: none;
   border-radius: 8px;
   background-color: #8d0000; /* #7c6e52 */
@@ -179,10 +187,10 @@
   transition: background-color 0.2s, transform 0.1s;
 }
 
-.btn-editar:hover { background-color: #6f0000; }  /* #5e5240 */
-.btn-editar:active { transform: scale(0.98); }
+.btn-perfil:hover { background-color: #6f0000; }  /* #5e5240 */
+.btn-perfil:active { transform: scale(0.98); }
 
-.btn-editar:disabled {
+.btn-perfil:disabled {
   background-color: rgba(124, 110, 82, 0.45);
   cursor: not-allowed;
   transform: none;
@@ -206,7 +214,7 @@
 .grid-endereco {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: 0px 16px;
 }
 
 /* .btn-salvar {
@@ -228,19 +236,21 @@
 
 
 /* Botão editar perfil */
-.btn-outline {
+.btn-endereco {
   width: 100%;
   height: 48px;
-  margin-top: 10px;
+  margin-top: 24px;
   border: 1px solid #900000;
   border-radius: 8px;
   background: transparent;
   color: #900000;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
   font-weight: 600;
   cursor: pointer;
 }
 
-.btn-outline:hover {
+.btn-endereco:hover {
   background: #fff5f5;
 }
 
