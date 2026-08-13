@@ -22,4 +22,5 @@ fetch('http://localhost:3000/perfil', {
 .then(data => {
     document.getElementById('nomeUsuario').value = data.nome
     document.getElementById('emailUsuario').value = data.email
+    document.getElementById('clienteDesde').value = new Date(data.createdAt).toLocaleDateString('pt-BR')
 })
