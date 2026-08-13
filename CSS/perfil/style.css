@@ -14,7 +14,7 @@
 
 .card-perfil {
   width: 100%;
-  max-width: 580px;
+  max-width: 560px;
   padding: 48px 40px;
   border-radius: 16px;
   background-color: #fff;
@@ -52,8 +52,8 @@
 
 /* Menu Lateral */
 .menu-perfil {
-  width: 250px;
-  padding: 30px;
+  width: 265px;
+  padding: 20px 0px;
   border-radius: 16px;
   background: white;
   box-shadow: 0 4px 24px rgba(0,0,0,.08);
@@ -66,16 +66,18 @@
   text-decoration: none;
   color: #7c6e52;
   font-weight: 500;
-  padding: 10px;
+  padding: 10px 35px;
 }
 
 .menu-perfil a:hover {
   color: #a50000;
+  border-left: 4px solid #a50000;
+  transform: scaleY(1.05);
+  transition: all 0.2s ease;
 }
 
 .item-menu.ativo {
   color: #a50000;
-  border-left: 4px solid #a50000;
   padding-left: 12px;
 }
 
