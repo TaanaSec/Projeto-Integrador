@@ -1,4 +1,4 @@
-/* ── RESET ── */
+/* ── RESET ──
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -6,7 +6,7 @@
 }
 
 /* ── BODY ── */
-body {
+/*body {
   line-height: normal;
   background-color: #f9f4f0;
   font-family: 'Montserrat', sans-serif;
@@ -20,4 +20,4 @@ body {
 
 main {
   flex: 1;
-}
+} */

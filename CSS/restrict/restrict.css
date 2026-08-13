@@ -1,0 +1,198 @@
+/* ── RESET ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── BODY ── */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  line-height: normal;
+  background-color: #f9f4f0;
+  color: #7c6e52;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
+
+main {
+  flex: 1;
+  padding: 24px;
+}
+
+/* ── HEADER ── */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: #f9f4f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 16px 40px;
+  gap: 24px;
+}
+
+.header-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  margin: 0;
+}
+
+/* ── MENU HAMBURGUER ── */
+.menu-container {
+  display: block;
+  position: relative;
+  order: -1;
+}
+
+.btn-hamburguer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  padding: 4px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+
+.btn-hamburguer span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #7c6e52;
+  transition: all 0.3s;
+}
+
+.btn-hamburguer:hover span {
+  background-color: #a50000;
+}
+
+/* Estados do hamburguer animado */
+.btn-hamburguer.ativo span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.btn-hamburguer.ativo span:nth-child(2) {
+  opacity: 0;
+}
+
+.btn-hamburguer.ativo span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* ── MENU DROPDOWN ── */
+.menu-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  background-color: #f9f4f0;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  z-index: 200;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.menu-dropdown.ativo {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-dropdown a,
+.menu-dropdown button {
+  display: block;
+  width: 100%;
+  padding: 12px 16px;
+  color: #7c6e52;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.15s;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.menu-dropdown a:last-child,
+.menu-dropdown button:last-child {
+  border-bottom: none;
+}
+
+.menu-dropdown a:hover,
+.menu-dropdown button:hover {
+  background-color: #ede8e2;
+  color: #a50000;
+  padding-left: 20px;
+}
+
+.menu-divisor {
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.12);
+  margin: 4px 0;
+}
+
+#btnSair, 
+#btnConfiguracoes {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#btnSair img, 
+#btnConfiguracoes img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+
+
+/* ── FOOTER ── */
+.site-footer {
+  width: 100%;
+  padding: 24px 40px;
+  background-color: #d9d9d9;
+  color: rgba(0, 0, 0, 0.61);
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.container-perfil {
+  margin-left: auto;
+}
+
+.link-perfil {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #7c6e52;
+}
+
+.icone-perfil {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
