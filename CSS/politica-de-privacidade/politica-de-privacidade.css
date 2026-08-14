@@ -9,7 +9,7 @@
   min-height: 60vh;
 }
 
-.pagina-termoDeUso {
+.pagina-politicaPrivacidade {
   max-width: 900px;
   margin: 0 auto;
   background: #ffffff;
@@ -19,7 +19,7 @@
   border: 1px solid #ece7e2;
 }
 
-.pagina-termoDeUso h2 {
+.pagina-politicaPrivacidade h2 {
   font-size: 2rem;
   color: #6b1f29;
   margin-bottom: 25px;
@@ -27,14 +27,14 @@
   border-bottom: 2px solid #e6dfd8;
 }
 
-.pagina-termoDeUso h3 {
+.pagina-politicaPrivacidade h3 {
   font-size: 1.4rem;
   color: #6b1f29;
   margin-top: 35px;
   margin-bottom: 15px;
 }
 
-.pagina-termoDeUso p {
+.pagina-politicaPrivacidade p {
   color: #555;
   font-size: 1rem;
   line-height: 1.8;
@@ -42,31 +42,31 @@
   text-align: justify;
 }
 
-.pagina-termoDeUso ul {
+.pagina-politicaPrivacidade ul {
   margin: 15px 0 25px 25px;
   padding: 0;
 }
 
-.pagina-termoDeUso li {
+.pagina-politicaPrivacidade li {
   color: #555;
   line-height: 1.8;
   margin-bottom: 10px;
 }
 
-.pagina-termoDeUso a {
+.pagina-politicaPrivacidade a {
   color: #6b1f29;
   text-decoration: none;
   font-weight: 600;
   transition: 0.3s ease;
 }
 
-.pagina-termoDeUso a:hover {
+.pagina-politicaPrivacidade a:hover {
   color: #8f2d3b;
   text-decoration: underline;
 }
 
 /* Destaque para a data final */
-.pagina-termoDeUso p:last-child {
+.pagina-politicaPrivacidade p:last-child {
   margin-top: 30px;
   padding-top: 15px;
   border-top: 1px solid #e6dfd8;
@@ -80,20 +80,20 @@
       padding: 20px 15px 40px;
   }
 
-  .pagina-termoDeUso {
+  .pagina-politicaPrivacidade {
       padding: 25px;
   }
 
-  .pagina-termoDeUso h2 {
+  .pagina-politicaPrivacidade h2 {
       font-size: 1.7rem;
   }
 
-  .pagina-termoDeUso h3 {
+  .pagina-politicaPrivacidade h3 {
       font-size: 1.2rem;
   }
 
-  .pagina-termoDeUso p,
-  .pagina-termoDeUso li {
+  .pagina-politicaPrivacidade p,
+  .pagina-politicaPrivacidade li {
       font-size: 0.95rem;
   }
 }
