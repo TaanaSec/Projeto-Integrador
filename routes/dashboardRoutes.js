@@ -54,34 +54,34 @@ router.get('/produtos/quantidade', async (req, res) => {
     } 
 })
 
-//Rota de criação de relatorios--------------------------------------------------------
-const Relatorio = require('../models/relatoriosModel')
+// //Rota de criação de relatorios--------------------------------------------------------
+// const Relatorio = require('../models/relatoriosModel')
 
-router.post('/relatorios', async (req, res) => {
+// router.post('/relatorios', async (req, res) => {
 
-    try {
+//     try {
 
-        const novoRelatorio = new Relatorio({
-            titulo: req.body.titulo,
-            tipo: req.body.tipo,
-            dataInicial: req.body.dataInicial,
-            dataFinal: req.body.dataFinal,
-            descricao: req.body.descricao
-        })
+//         const novoRelatorio = new Relatorio({
+//             titulo: req.body.titulo,
+//             tipo: req.body.tipo,
+//             dataInicial: req.body.dataInicial,
+//             dataFinal: req.body.dataFinal,
+//             descricao: req.body.descricao
+//         })
 
-        await novoRelatorio.save()
+//         await novoRelatorio.save()
 
-        res.status(201).json({
-            mensagem: 'Relatório criado com sucesso!',
-            relatorio: novoRelatorio
-        })
+//         res.status(201).json({
+//             mensagem: 'Relatório criado com sucesso!',
+//             relatorio: novoRelatorio
+//         })
 
-    } catch (erro) {
+//     } catch (erro) {
 
-        console.error(erro)
+//         console.error(erro)
 
-        res.status(500).json({
-            erro: 'Erro ao criar relatório'
-        })
-    }
-})
+//         res.status(500).json({
+//             erro: 'Erro ao criar relatório'
+//         })
+//     }
+// })

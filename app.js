@@ -5,6 +5,7 @@ require("./config/db")
 
 const loginRoutes = require('./routes/loginRoutes')
 const dashboardRoutes = require('./routes/dashboardRoutes')
+const relatoriosRoutes = require('./routes/relatoriosRoutes')
 
 const app = express()
 
@@ -22,7 +23,7 @@ app.get("/", (req, res) => {
 // Rota de Login Cadastro e Dashboards
 app.use("/", loginRoutes)
 app.use("/api", dashboardRoutes)
-
+app.use("/api", relatoriosRoutes)
 
 
 app.listen(PORT, () => {
