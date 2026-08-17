@@ -8,12 +8,13 @@
 
   <link rel="icon" href="../icon/logo-emporio.ico" type="image/ico">
   <link rel="stylesheet" href="../CSS/vinhos/vinhos.css">
+  <link rel="stylesheet" href="../CSS/Global/global.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
 </head>
 
 <body>
-    <header class="site-header" style="position:relative;">
+  <header class="site-header" style="position:relative;">
     <div class="header-container">
       <a href="../index.html" aria-label="Página inicial">
         <img class="header-logo" src="../img/logo-emporio.png" alt="Logo Empório La Tavola">
@@ -66,15 +67,377 @@
   </header>
 
 
-
-
-
-
   <main class="pagina-conteudo">
-    <!-- Conteúdo de Vinhos -->
+
+    <section id="section-main">
+      <div class="container main-layout">
+        <aside class="sidebar">
+          <div class="delivery-box">
+            <div class="delivery-header">
+              <img src="${ASSET_PATH}/57_2567.svg" alt="Location" />
+              <span>Entregar em</span>
+            </div>
+            <div class="delivery-input">
+              <input type="text" placeholder="Informe seu cep" />
+            </div>
+          </div>
+
+          <div class="filter-box">
+            <h2 class="filter-title">Filtrar por</h2>
+            <div class="active-filters">
+              <span class="filter-tag">Tinto X</span>
+            </div>
+
+            <div class="filter-group">
+              <h3 class="filter-group-title">Categoria</h3>
+              <label class="checkbox-label">
+                <input type="checkbox" checked />
+                <span class="custom-checkbox"></span>
+                Bebidas
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" />
+                <span class="custom-checkbox"></span>
+                Queijos
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" />
+                <span class="custom-checkbox"></span>
+                Geleias
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" />
+                <span class="custom-checkbox"></span>
+                Conservas
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" />
+                <span class="custom-checkbox"></span>
+                Pães
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" />
+                <span class="custom-checkbox"></span>
+                Grãos
+              </label>
+            </div>
+
+            <div class="filter-group">
+              <h3 class="filter-group-title">Subcategoria</h3>
+              <label class="checkbox-label">
+                <input type="checkbox" checked />
+                <span class="custom-checkbox"></span>
+                Vinhos
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" />
+                <span class="custom-checkbox"></span>
+                Sucos
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" />
+                <span class="custom-checkbox"></span>
+                Gaseificados
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" />
+                <span class="custom-checkbox"></span>
+                Destilados
+              </label>
+            </div>
+
+            <div class="filter-group">
+              <h3 class="filter-group-title">Tipo de vinho</h3>
+              <label class="checkbox-label">
+                <input type="checkbox" />
+                <span class="custom-checkbox radio-style"></span>
+                Branco
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" />
+                <span class="custom-checkbox radio-style"></span>
+                Moscatel
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" />
+                <span class="custom-checkbox radio-style"></span>
+                Porto
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" />
+                <span class="custom-checkbox radio-style"></span>
+                Rosé
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" checked />
+                <span class="custom-checkbox radio-style"></span>
+                Tinto
+              </label>
+            </div>
+
+            <div class="filter-group">
+              <h3 class="filter-group-title">Faixas de preço</h3>
+              <div class="price-range">
+                <div class="range-track"></div>
+                <div class="range-handle left"></div>
+                <div class="range-handle right"></div>
+              </div>
+              <div class="price-labels">
+                <span>R$7,00</span>
+                <span>R$900,00</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <main class="product-area">
+          <div class="breadcrumbs">Início | Bebidas | Vinhos | Tinto</div>
+
+          <div class="product-header">
+            <h1 class="page-title">Todos os vinhos tintos (263 produtos)</h1>
+            <div class="sort-dropdown">
+              <span class="sort-label">Ordenar por:</span>
+              <span class="sort-value">Relevância</span>
+              <img src="${ASSET_PATH}/57_2564.svg" alt="Arrow Down" />
+            </div>
+          </div>
+
+          <div class="product-grid">
+            <!-- Row 1 -->
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="${ASSET_PATH}/1e111f35bf4e9eb9d8cedb4fea1497a4814aa4ec.png"
+                  alt="Vinho Côtto Duro"
+                />
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Vinho Côtto Duro - 750ml</h3>
+                <p class="product-price">R$99,80</p>
+              </div>
+              <button class="btn-buy">COMPRAR</button>
+            </div>
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="${ASSET_PATH}/65e30b0393a826f7b0a930e2a1c432ec1547b1f3.png"
+                  alt="Vinho Chianti Clássico"
+                />
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Vinho Chianti Clássico - 750ml</h3>
+                <p class="product-price">R$134,80</p>
+              </div>
+              <button class="btn-buy">COMPRAR</button>
+            </div>
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="${ASSET_PATH}/09b89f929d7e39985d8e0de8e0eabb3c6a3a7f38.png"
+                  alt="Vinho Le Petit Courret"
+                />
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Vinho Le Petit Courret - 750ml</h3>
+                <p class="product-price">R$87,00</p>
+              </div>
+              <button class="btn-buy">COMPRAR</button>
+            </div>
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="${ASSET_PATH}/c0986e93228027eb001b9fa17fdc22d1ad3d0e18.png"
+                  alt="Vinho Madai Thera"
+                />
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Vinho Madai Thera - 750ml</h3>
+                <p class="product-price">R$196,00</p>
+              </div>
+              <button class="btn-buy">COMPRAR</button>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="${ASSET_PATH}/68a6938f2b163410d54a0e31dde516e9ecd5d98b.png"
+                  alt="Vinho UVVA Cordel"
+                />
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Vinho UVVA Cordel - 750ml</h3>
+                <p class="product-price">R$460,00</p>
+              </div>
+              <button class="btn-buy">COMPRAR</button>
+            </div>
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="${ASSET_PATH}/64df3353b7ba41ba1427484bb01b634decbe4e99.png"
+                  alt="Vinho Shiraz Wakefield"
+                />
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Vinho Shiraz Wakefield - 750ml</h3>
+                <p class="product-price">R$205,00</p>
+              </div>
+              <button class="btn-buy">COMPRAR</button>
+            </div>
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="${ASSET_PATH}/4fdd0e2be394fafce3e779043437852e73a3608e.png"
+                  alt="Vinho Le Petit Ducru"
+                />
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Vinho Le Petit Ducru - 750ml</h3>
+                <p class="product-price">R$606,00</p>
+              </div>
+              <button class="btn-buy">COMPRAR</button>
+            </div>
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="${ASSET_PATH}/ca1fc9f2a47d480eccea74c1e063717851fdab40.png"
+                  alt="Vinho Badaresco"
+                />
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Vinho Badaresco - 750ml</h3>
+                <p class="product-price">R$830,00</p>
+              </div>
+              <button class="btn-buy">COMPRAR</button>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="${ASSET_PATH}/376a18841c697f83c8549870fd1d891d8d7a9fef.png"
+                  alt="Vinho Il Pino di Biserno"
+                />
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Vinho Il Pino di Biserno - 750ml</h3>
+                <p class="product-price">R$768,00</p>
+              </div>
+              <button class="btn-buy">COMPRAR</button>
+            </div>
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="${ASSET_PATH}/c05100d3309577959ea956650c6ca42f425ea081.png"
+                  alt="Vinho Mil Volcanes"
+                />
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Vinho Mil Volcanes - 750ml</h3>
+                <p class="product-price">R$99,00</p>
+              </div>
+              <button class="btn-buy">COMPRAR</button>
+            </div>
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="${ASSET_PATH}/272ca9e46794f53ea982b779d9d8970ed72ede85.png"
+                  alt="Vinho Piattelli Reserva"
+                />
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Vinho Piattelli Reserva - 750ml</h3>
+                <p class="product-price">R$169,00</p>
+              </div>
+              <button class="btn-buy">COMPRAR</button>
+            </div>
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="${ASSET_PATH}/41c9bd2b1d9a86d9e316442c1a32ca59de67b916.png"
+                  alt="Vinho Santa Ema"
+                />
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Vinho Santa Ema - 750ml</h3>
+                <p class="product-price">R$159,00</p>
+              </div>
+              <button class="btn-buy">COMPRAR</button>
+            </div>
+
+            <!-- Row 4 -->
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="${ASSET_PATH}/65e30b0393a826f7b0a930e2a1c432ec1547b1f3.png"
+                  alt="Vinho Côtto Duro"
+                />
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Vinho Côtto Duro - 750ml</h3>
+                <p class="product-price">R$99,80</p>
+              </div>
+              <button class="btn-buy">COMPRAR</button>
+            </div>
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="${ASSET_PATH}/c0986e93228027eb001b9fa17fdc22d1ad3d0e18.png"
+                  alt="Vinho Chianti Clássico"
+                />
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Vinho Chianti Clássico - 750ml</h3>
+                <p class="product-price">R$134,80</p>
+              </div>
+              <button class="btn-buy">COMPRAR</button>
+            </div>
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="${ASSET_PATH}/09b89f929d7e39985d8e0de8e0eabb3c6a3a7f38.png"
+                  alt="Vinho Le Petit Courret"
+                />
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Vinho Le Petit Courret - 750ml</h3>
+                <p class="product-price">R$87,00</p>
+              </div>
+              <button class="btn-buy">COMPRAR</button>
+            </div>
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="${ASSET_PATH}/1e111f35bf4e9eb9d8cedb4fea1497a4814aa4ec.png"
+                  alt="Vinho Madai Thera"
+                />
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Vinho Madai Thera - 750ml</h3>
+                <p class="product-price">R$196,00</p>
+              </div>
+              <button class="btn-buy">COMPRAR</button>
+            </div>
+          </div>
+
+          <div class="pagination">
+            <button class="page-arrow prev">
+              <img src="${ASSET_PATH}/57_2527.svg" alt="Prev" />
+            </button>
+            <button class="page-num active">1</button>
+            <button class="page-num">2</button>
+            <button class="page-num">3</button>
+            <button class="page-num">4</button>
+            <button class="page-num">5</button>
+            <button class="page-arrow next">
+              <img src="${ASSET_PATH}/57_2528.svg" alt="Next" />
+            </button>
+          </div>
+        </main>
+      </div>
+    </section>
+
   </main>
-
-
 
 
 
