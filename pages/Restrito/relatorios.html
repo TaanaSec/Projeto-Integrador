@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
   <link rel="stylesheet" href="/CSS/restrict/restrict.css">
-  <link rel="stylesheet" href="/CSS//restrict/relatorios/relatorios.css">
+  <link rel="stylesheet" href="/CSS/restrict/relatorios/relatorios.css">
 </head>
 
 <body>
@@ -145,7 +145,7 @@
         <p>Preencha os dados abaixo para criar um novo relatório.</p>
     </section>
 
-    <section class="cartao-relatorio">
+    <section class="cartao-relatorio" id="areaFormularioRelatorio" hidden>
         <form id="formularioRelatorio">
             
             <div class="campo">
@@ -175,7 +175,7 @@
                     </option>
 
                     <option value="vendas">
-                        vendas
+                        Vendas
                     </option>
 
                     <option value="outros">
@@ -225,16 +225,14 @@
             </div>
 
             <div class="botoes-relatorio">
-                <button class="botao-cancelar" type="reset">Limpar</button>
+                <button class="botao-cancelar" id="botaoCancelarFormulario" type="button">
+                    Cancelar
+                </button>
 
                 <button class="botao-criar" type="submit">Criar Relatório</button>
-
             </div>
 
-
-
         </form>
-
 
     </section>
 
