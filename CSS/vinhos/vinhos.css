@@ -31,30 +31,33 @@ input {
   outline: none;
 }
 
-#section-main {
+#secao-vinhos {
   padding: 40px 0 100px;
 }
-.main-layout {
+
+.conteudo-vinhos {
   display: flex;
   gap: 40px;
   padding: 0 200px;
 }
 
-/* Sidebar Styles */
-.sidebar {
+/* BARRA DE FILTROS */
+.barra-filtros {
   width: 371px;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.delivery-box {
+
+.card-entrega {
   background: #ffffff;
   border: 1px solid #7c6e52;
   border-radius: 12px;
   padding: 20px;
 }
-.delivery-header {
+
+.cabecalho-entrega {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -62,7 +65,8 @@ input {
   font-size: 16px;
   margin-bottom: 15px;
 }
-.delivery-input input {
+
+.campo-entrega input {
   width: 100%;
   height: 29px;
   border: 1px solid #7c6e52;
@@ -71,20 +75,24 @@ input {
   color: rgba(124, 110, 82, 0.5);
 }
 
-.filter-box {
+
+.card-filtros {
   background-color: #f4e2e2;
   border-radius: 12px;
   padding: 25px;
 }
-.filter-title {
+
+.titulo-filtros {
   font-size: 18px;
   color: #403838;
   margin: 0 0 15px 0;
 }
-.active-filters {
+
+.filtros-ativos {
   margin-bottom: 20px;
 }
-.filter-tag {
+
+.filtro-ativo {
   display: inline-block;
   background-color: #d9d9d9;
   border: 1px solid #892e2e;
@@ -93,17 +101,20 @@ input {
   color: #5d0000;
   font-size: 12px;
 }
-.filter-group {
+
+.grupo-filtros {
   margin-bottom: 25px;
   border-top: 1px solid #403838;
   padding-top: 15px;
 }
-.filter-group-title {
+
+.titulo-grupo-filtros {
   font-size: 16px;
   color: #403838;
   margin: 0 0 15px 0;
 }
-.checkbox-label {
+
+.rotulo-checkbox {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -112,29 +123,35 @@ input {
   font-size: 14px;
   color: #403838;
 }
-.checkbox-label input {
+
+.rotulo-checkbox input {
   display: none;
 }
-.custom-checkbox {
+
+.checkbox-personalizado {
   width: 16px;
   height: 16px;
   background-color: #d9d9d9;
   border-radius: 2px;
   display: inline-block;
 }
-.checkbox-label input:checked + .custom-checkbox {
+
+.rotulo-checkbox input:checked + .checkbox-personalizado {
   background-color: #875a5a;
 }
-.custom-checkbox.radio-style {
+
+.checkbox-personalizado.estilo-radio {
   border-radius: 50%;
 }
 
-.price-range {
+
+.faixa-preco {
   position: relative;
   height: 20px;
   margin-top: 10px;
 }
-.range-track {
+
+.trilho-faixa {
   position: absolute;
   top: 50%;
   left: 0;
@@ -143,7 +160,8 @@ input {
   background-color: #892e2e;
   transform: translateY(-50%);
 }
-.range-handle {
+
+.controle-faixa {
   position: absolute;
   top: 50%;
   width: 11px;
@@ -152,13 +170,16 @@ input {
   border-radius: 50%;
   transform: translate(-50%, -50%);
 }
-.range-handle.left {
+
+.controle-faixa.esquerda {
   left: 10%;
 }
-.range-handle.right {
+
+.controle-faixa.direita {
   left: 90%;
 }
-.price-labels {
+
+.valores-faixa {
   display: flex;
   justify-content: space-between;
   font-size: 14px;
@@ -167,26 +188,30 @@ input {
 }
 
 /* Product Area Styles */
-.product-area {
+.area-produtos {
   flex: 1;
 }
-.breadcrumbs {
+
+.caminho-navegacao {
   font-size: 14px;
   color: #403838;
   margin-bottom: 20px;
 }
-.product-header {
+
+.cabecalho-produtos {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
 }
-.page-title {
+
+.titulo-pagina {
   font-size: 24px;
   color: #403838;
   margin: 0;
 }
-.sort-dropdown {
+
+.seletor-ordenacao {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -196,22 +221,26 @@ input {
   padding: 10px 20px;
   cursor: pointer;
 }
-.sort-label {
+
+.rotulo-ordenacao {
   color: #7c6e52;
   font-size: 14px;
 }
-.sort-value {
+
+.valor-ordenacao {
   color: #403838;
   font-size: 14px;
 }
 
-.product-grid {
+
+.lista-produtos {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
   margin-bottom: 50px;
 }
-.product-card {
+
+.card-produto {
   background: #ffffff;
   border-radius: 12px;
   box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.1);
@@ -221,38 +250,44 @@ input {
   align-items: center;
   text-align: center;
 }
-.product-image {
+
+.produto-imagem-area {
   height: 220px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 15px;
 }
-.product-image img {
+
+.produto-imagem-area img {
   max-height: 100%;
   max-width: 100%;
   object-fit: contain;
 }
-.product-info {
+
+.produto-info {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   margin-bottom: 15px;
 }
-.product-title {
+
+.produto-nome {
   font-size: 14px;
   color: #403838;
   margin: 0 0 5px 0;
   line-height: 1.4;
 }
-.product-price {
+
+.produto-preco {
   font-size: 16px;
   font-weight: bold;
   color: #403838;
   margin: 0;
 }
-.btn-buy {
+
+.btn-comprar {
   background-color: #5d0000;
   color: #ffffff;
   border-radius: 7px;
@@ -262,18 +297,21 @@ input {
   font-weight: bold;
   transition: background-color 0.2s;
 }
-.btn-buy:hover {
+
+.btn-comprar:hover {
   background-color: #400101;
 }
 
+
 /* Pagination */
-.pagination {
+.paginacao {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
 }
-.page-num {
+
+.numero-pagina {
   width: 50px;
   height: 50px;
   border-radius: 8px;
@@ -285,10 +323,12 @@ input {
   align-items: center;
   justify-content: center;
 }
-.page-num.active {
+
+.numero-pagina.ativo {
   background-color: #c59898;
 }
-.page-arrow {
+
+.seta-paginacao {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -297,37 +337,40 @@ input {
 
 /* Responsive adjustments */
 @media (max-width: 1600px) {
-  .main-layout {
+  .conteudo-vinhos {
     padding: 0 50px;
   }
 }
+
 @media (max-width: 1200px) {
-  .product-grid {
+  .lista-produtos {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
 @media (max-width: 992px) {
-  .main-layout {
+  .conteudo-vinhos {
     flex-direction: column;
   }
-  .sidebar {
+  .barra-filtros {
     width: 100%;
   }
-  .product-grid {
+  .lista-produtos {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 @media (max-width: 576px) {
-  .product-grid {
+  .lista-produtos {
     grid-template-columns: 1fr;
   }
-  .product-header {
+
+  .cabecalho-produtos {
     flex-direction: column;
     align-items: flex-start;
     gap: 15px;
   }
 }
-
 
 @media (max-width: 768px) {
   .pagina-conteudo { padding: 24px 16px; }
