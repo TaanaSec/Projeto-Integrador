@@ -8,7 +8,9 @@
   <link rel="icon" href="/icon/logo-emporio.ico" type="image/ico">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+  <link rel="stylesheet" href="/CSS/restrict/estatisticas/estatisticas.css">
   <link rel="stylesheet" href="/CSS/restrict/restrict.css">
+  
 </head>
 
 <body>
@@ -71,7 +73,148 @@
   </header>
 
   <!-- ════════════════════════════════════════ MAIN ════════════════════════════════════════ -->
-  <main class="painel">
+  <main class="painel-estatisticas">
+
+    <!-- CABEÇALHO -->
+    <section class="cabecalho-estatisticas">
+        <div>
+            <h1>Estatísticas</h1>
+
+            <p>
+                Acompanhe os principais dados e indicadores do Empório.
+            </p>
+        </div>
+
+        <div class="filtro-periodo">
+            <label for="periodoEstatisticas">Período</label>
+
+            <select id="periodoEstatisticas">
+                <option value="7">Últimos 7 dias</option>
+                <option value="30" selected>Últimos 30 dias</option>
+                <option value="90">Últimos 90 dias</option>
+            </select>
+        </div>
+    </section>
+
+
+    <!-- INDICADORES -->
+    <section class="cartoes-estatisticas">
+
+        <article class="cartao-estatistica">
+
+            <div class="icone-estatistica">
+                <img src="/img/icone-usuarios.png" alt="Usuários">
+            </div>
+
+            <div class="informacao-estatistica">
+                <span>Total de usuários</span>
+                <strong id="totalUsuarios">0</strong>
+            </div>
+
+        </article>
+
+
+        <article class="cartao-estatistica">
+
+            <div class="icone-estatistica">
+                <img src="/img/icone-produtos.png" alt="Produtos">
+            </div>
+
+            <div class="informacao-estatistica">
+                <span>Total de produtos</span>
+                <strong id="totalProdutos">0</strong>
+            </div>
+
+        </article>
+
+
+        <article class="cartao-estatistica">
+
+            <div class="icone-estatistica">
+                <span>R$</span>
+            </div>
+
+            <div class="informacao-estatistica">
+                <span>Vendas no período</span>
+                <strong id="totalVendas">R$ 0,00</strong>
+            </div>
+
+        </article>
+
+
+        <article class="cartao-estatistica">
+
+            <div class="icone-estatistica">
+                <span>#</span>
+            </div>
+
+            <div class="informacao-estatistica">
+                <span>Pedidos realizados</span>
+                <strong id="totalPedidos">0</strong>
+            </div>
+
+        </article>
+
+    </section>
+
+
+    <!-- GRÁFICOS -->
+    <section class="grade-estatisticas">
+
+        <article class="painel-grafico painel-grafico-grande">
+
+            <div class="cabecalho-grafico">
+                <div>
+                    <h2>Vendas por período</h2>
+                    <span>Desempenho das vendas</span>
+                </div>
+            </div>
+
+            <div class="grafico">
+                <div class="grafico-placeholder">
+                    Gráfico de vendas
+                </div>
+            </div>
+
+        </article>
+
+
+        <article class="painel-grafico">
+
+            <div class="cabecalho-grafico">
+                <div>
+                    <h2>Produtos</h2>
+                    <span>Distribuição dos produtos</span>
+                </div>
+            </div>
+
+            <div class="grafico">
+                <div class="grafico-placeholder">
+                    Gráfico de produtos
+                </div>
+            </div>
+
+        </article>
+
+
+        <article class="painel-grafico">
+
+            <div class="cabecalho-grafico">
+                <div>
+                    <h2>Usuários</h2>
+                    <span>Crescimento de usuários</span>
+                </div>
+            </div>
+
+            <div class="grafico">
+                <div class="grafico-placeholder">
+                    Gráfico de usuários
+                </div>
+            </div>
+
+        </article>
+
+    </section>
 
   </main>
 
@@ -82,6 +225,7 @@
 
   <script src="/JS/restrict/menuHamburguer.js"></script>
   <script src="/JS/restrict/logout.js"></script>
+  <script src="/JS/admin/adminAuth.js"></script>
 
 </body>
 </html>

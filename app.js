@@ -4,6 +4,7 @@ const cors = require('cors')
 require("./config/db")
 
 const loginRoutes = require('./routes/loginRoutes')
+const adminRoutes = require('./routes/adminRoutes')
 const dashboardRoutes = require('./routes/dashboardRoutes')
 const relatoriosRoutes = require('./routes/relatoriosRoutes')
 
@@ -22,6 +23,7 @@ app.get("/", (req, res) => {
 
 // Rota de Login Cadastro e Dashboards
 app.use("/", loginRoutes)
+app.use('/api', adminRoutes)
 app.use("/api", dashboardRoutes)
 app.use("/api", relatoriosRoutes)
 
