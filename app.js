@@ -26,6 +26,7 @@ app.use("/", loginRoutes)
 app.use('/api', adminRoutes)
 app.use("/api", dashboardRoutes)
 app.use("/api", relatoriosRoutes)
+app.use('/uploads', express.static('uploads'))
 
 
 app.listen(PORT, () => {
