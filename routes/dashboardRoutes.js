@@ -1,5 +1,6 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const adminAuth = require('../middlewares/adminAuth');
 
 //Rota de consulta de usuarios--------------------------------------------------------
 const router = express.Router()

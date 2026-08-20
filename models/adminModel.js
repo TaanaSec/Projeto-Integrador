@@ -3,7 +3,8 @@ const adminSchema = new mongoose.Schema({
 
     nome: {type: String, required: true},
     email: {type: String, required: true, unique: true, lowercase: true},
-    senha: {type: String, required: true, select: false}
+    senha: {type: String, required: true, select: false},
+    nivel: {type: String, enum: ['admin', 'superadmin'], default: 'admin'}
 }, 
 
 {
