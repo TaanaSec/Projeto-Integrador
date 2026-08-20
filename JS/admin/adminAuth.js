@@ -1,5 +1,5 @@
-const adminToken = sessionStorage.getItem('adminToken')
+// const adminToken = sessionStorage.getItem('adminToken')
 
-if (!adminToken) {
-    window.location.href = '/pages/admin-login.html'
-}
+// if (!adminToken) {
+//     window.location.href = '/pages/admin-login.html'
+// }
