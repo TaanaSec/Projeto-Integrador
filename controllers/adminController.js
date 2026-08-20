@@ -1,13 +1,6 @@
-<<<<<<< HEAD
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const Admin = require('../models/adminModel');
-=======
-const jwt = require('jsonwebtoken')
-const bcrypt = require('bcrypt')
-const Admin = require('../models/adminModel')
->>>>>>> 0b0f815e63b2a95d7bed90ccd56f2253bee682b9
-
 exports.login = async (req, res) => {
 
     try {
