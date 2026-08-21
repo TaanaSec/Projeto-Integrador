@@ -38,11 +38,16 @@ main {
   gap: 24px;
 }
 
+.site-header a {
+  text-decoration: none;
+}
+
 .header-title {
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
   font-weight: 600;
   color: #000;
+  text-decoration: none;
   margin: 0;
 }
 
