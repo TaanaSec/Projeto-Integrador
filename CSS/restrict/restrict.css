@@ -38,11 +38,16 @@ main {
   gap: 24px;
 }
 
+.site-header a {
+  text-decoration: none;
+}
+
 .header-title {
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
   font-weight: 600;
   color: #000;
+  text-decoration: none;
   margin: 0;
 }
 
@@ -91,7 +96,7 @@ main {
 }
 
 .btn-hamburguer.ativo span:nth-child(3) {
-  transform: rotate(-45deg) translate(7px, -7px);
+  transform: rotate(-45deg) translate(2px, -2px);
 }
 
 /* ── MENU DROPDOWN ── */
@@ -205,6 +210,13 @@ main {
 
 .painel {
   padding: 32px 40px;
+}
+
+/* Para o painel administrativo */
+#painel-admin {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 
