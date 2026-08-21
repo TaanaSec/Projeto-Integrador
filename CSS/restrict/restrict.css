@@ -212,6 +212,13 @@ main {
   padding: 32px 40px;
 }
 
+/* Para o painel administrativo */
+#painel-admin {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
 
 /* ── INTRODUÇÃO ── */
 
