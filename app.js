@@ -7,6 +7,7 @@ const loginRoutes = require('./routes/loginRoutes')
 const adminRoutes = require('./routes/adminRoutes')
 const dashboardRoutes = require('./routes/dashboardRoutes')
 const relatoriosRoutes = require('./routes/relatoriosRoutes')
+const produtoRoutes = require('./routes/produtoRoutes')
 
 const app = express()
 
@@ -26,6 +27,7 @@ app.use("/", loginRoutes)
 app.use('/api', adminRoutes)
 app.use("/api", dashboardRoutes)
 app.use("/api", relatoriosRoutes)
+app.use('/api', produtoRoutes)
 app.use('/uploads', express.static('uploads'))
 
 
