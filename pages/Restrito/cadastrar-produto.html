@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Painel</title>
+  <title>Cadastro de Produtos</title>
 
   <link rel="icon" href="/icon/logo-emporio.ico" type="image/ico">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
@@ -78,7 +78,7 @@
         <div>
             <h1>Cadastro de Produtos</h1>
 
-            <p>Insira as informações do produto para cadastra-lo.</p>
+            <p>Cadastre, consulte e exclua os produtos da loja.</p>
         </div>
 
         <button class="botao-criar" id="botaoMostrarFormulario" type="button">
@@ -100,66 +100,70 @@
 
 
 
-    <section class="cabecalho-pagina">
-        <h1>Cadastrar Produto</h1>
-        <p>Preencha os dados abaixo para cadastrar um novo produto.</p>
+    <section class="cabecalho-formulario" id="cabecalhoFormularioProduto" hidden>
+        <h2>Cadastrar produto</h2>
+        <p>Preencha os dados abaixo. Para vinho, informe também a vinícola e o ano.</p>
     </section>
 
-    <section class="cartao-produto" id="areaFormularioProduto" hidden> <!-- MUDAR O ID -->
+    <section class="cartao-produto" id="areaFormularioProduto" hidden>
         <form id="formularioProduto">
             
             <div class="campo">
-                <label for="tituloProduto">Título</label>
+                <label for="nomeProduto">Nome do produto</label>
                 
                 <input 
                     type="text" 
-                    name="titulo" 
-                    id="tituloProduto"
-                    placeholder="Digite o título do produto"
+                    name="nome"
+                    id="nomeProduto"
+                    placeholder="Ex.: Vinho Tinto Reserva"
                     required
                 >
             </div>
 
             <div class="campo">
-                <label for="tipoProduto">Tipo do produto</label>
+                <label for="categoriaProduto">Categoria</label>
 
-                <select name="tipo" id="tipoProduto" required>
+                <select name="categoria" id="categoriaProduto" required>
                     <option value="">Selecione uma opção</option>
-
-                    <option value="geleias">
-                        Geleias
-                    </option>
-
-                    <option value="sucos">
-                        Sucos
-                    </option>
-
-                    <option value="queijos">
-                        Queijos
-                    </option>
-
-                    <option value="vinhos">
-                        Vinhos
-                    </option>
-
+                    <option value="vinho">Vinho</option>
+                    <option value="geleia">Geleia</option>
+                    <option value="suco">Suco</option>
+                    <option value="queijo">Queijo</option>
                 </select>
             </div>
 
+            <div class="linha-campos" id="camposVinho" hidden>
+                <div class="campo">
+                    <label for="vinicolaProduto">Vinícola</label>
+                    <input type="text" name="vinicola" id="vinicolaProduto" placeholder="Ex.: Santa Ema">
+                </div>
+
+                <div class="campo">
+                    <label for="anoProduto">Ano</label>
+                    <input type="number" name="ano" id="anoProduto" min="1900" max="2100" placeholder="Ex.: 2024">
+                </div>
+            </div>
+
+            <div class="linha-campos">
+                <div class="campo">
+                    <label for="precoProduto">Preço (R$)</label>
+                    <input type="number" name="preco" id="precoProduto" min="0.01" step="0.01" placeholder="0,00" required>
+                </div>
+
+                <div class="campo">
+                    <label for="estoqueProduto">Estoque</label>
+                    <input type="number" name="estoque" id="estoqueProduto" min="0" step="1" placeholder="0" required>
+                </div>
+            </div>
 
             <div class="campo">
-                <label for="descricaoProduto">Descrição</label>
-
-                <textarea 
-                    name="descricao" 
-                    id="descricaoProduto"
-                    rows="6"
-                    placeholder="Digite as informações do produto..."
-                    required
-                ></textarea>
+                <label for="imagemProduto">Imagem do card</label>
+                <input type="file" name="imagem" id="imagemProduto" accept="image/*" required>
+                <small>Formatos de imagem aceitos. Tamanho máximo: 5 MB.</small>
             </div>
 
             <div class="botoes-produto">
-                <button class="botao-cancelar" id="botaoCancelarProduto" type="button">
+                <button class="botao-cancelar" id="botaoCancelarFormulario" type="button">
                     Cancelar
                 </button>
 
@@ -168,6 +172,32 @@
 
         </form>
 
+    </section>
+
+    <section class="filtros-produtos">
+        <div class="campo-pesquisa">
+            <label for="pesquisaProduto">Buscar produto</label>
+            <input id="pesquisaProduto" type="search" placeholder="Digite o nome do produto">
+        </div>
+
+        <div class="campo-filtro">
+            <label for="filtroCategoria">Categoria</label>
+            <select id="filtroCategoria">
+                <option value="">Todas</option>
+                <option value="vinho">Vinhos</option>
+                <option value="geleia">Geleias</option>
+                <option value="suco">Sucos</option>
+                <option value="queijo">Queijos</option>
+            </select>
+        </div>
+    </section>
+
+    <section class="area-produtos">
+        <div class="titulo-secao">
+            <h2>Produtos cadastrados</h2>
+            <span id="qtdResultados">0 produtos</span>
+        </div>
+        <div class="lista-produtos" id="listaProdutos"></div>
     </section>
 
   </main>
