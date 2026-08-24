@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Administrativo - La Tavola</title>
+    <link rel="icon" href="../icon/logo-emporio.ico" type="image/ico">
+    <link rel="stylesheet" href="../CSS/admin/admin-login.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+</head>
+
+
+<body>
+
+    <!-- ==================== HEADER ==================== -->
+    <header class="site-header">
+
+    </header>
+
+    <!-- ==================== MAIN ==================== -->
+
+    <main class="pagina-login">
+
+        <section class="card-login">
+
+            <h1>Acesso administrativo</h1>
+
+            <p>
+                Informe seu e-mail e senha para acessar o Painel Empório.
+            </p>
+
+
+            <form
+                id="formLoginAdmin"
+                class="formulario-login"
+            >
+
+                <div class="campo-formulario">
+
+                    <label for="emailAdmin">
+                        E-mail
+                    </label>
+
+                    <input
+                        type="email"
+                        id="emailAdmin"
+                        name="email"
+                        placeholder="seu@email.com"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="campo-formulario">
+
+                    <label for="senhaAdmin">
+                        Senha
+                    </label>
+
+                    <input
+                        type="password"
+                        id="senhaAdmin"
+                        name="senha"
+                        placeholder="Sua senha"
+                        required
+                    >
+
+                </div>
+
+
+                <div
+                    class="opcoes-login"
+                    style="justify-content: flex-end;"
+                >
+
+                    <a href="#">
+                        Esqueceu a senha?
+                    </a>
+
+                </div>
+
+
+                <div
+                    id="mensagemAdmin"
+                    class="mensagem"
+                    role="alert"
+                    aria-live="polite"
+                ></div>
+
+
+                <button
+                    type="submit"
+                    class="btn-entrar"
+                >
+                    Entrar no Painel
+                </button>
+
+            </form>
+
+
+            <div class="divisor-formulario">
+                <span>acesso restrito</span>
+            </div>
+
+
+            <div class="link-cadastro">
+
+                <p>
+                    Acesso exclusivo para administradores.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==================== FOOTER ==================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-logo-area">
+
+            <img
+                class="footer-logo"
+                src="../img/logo-emporio.png"
+                alt="Logo La Tavola"
+            >
+
+        </div>
+
+
+        <div class="footer-grid">
+
+            <div class="footer-coluna">
+
+                <h4>Contato</h4>
+
+                <div class="footer-redes-sociais">
+
+                    <img
+                        src="../img/logo-facebook.png"
+                        alt="Facebook"
+                    >
+
+                    <img
+                        src="../img/logo-instagram.png"
+                        alt="Instagram"
+                    >
+
+                </div>
+
+                <p>
+                    Segunda à sexta das 08h00 às 18h00
+                </p>
+
+                <div class="footer-contato-item">
+
+                    <img
+                        src="../img/icone-email.png"
+                        alt="Email"
+                    >
+
+                    <span>
+                        latavola@gmail.com.br
+                    </span>
+
+                </div>
+
+                <div class="footer-contato-item">
+
+                    <img
+                        src="../img/logo-whatsapp.png"
+                        alt="WhatsApp"
+                    >
+
+                    <span>
+                        +55 (19) 9999-9999
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-coluna">
+
+                <h4>Institucional</h4>
+
+                <a href="#">
+                    Atendimento
+                </a>
+
+                <a href="#">
+                    Quem Somos
+                </a>
+
+                <a href="#">
+                    Compra Segura
+                </a>
+
+                <a href="#">
+                    Como Comprar
+                </a>
+
+                <a href="#">
+                    Política de Entrega
+                </a>
+
+                <a href="#">
+                    Política de Trocas e Devoluções
+                </a>
+
+                <a href="#">
+                    Política de Privacidade
+                </a>
+
+                <a href="#">
+                    Avaliações
+                </a>
+
+            </div>
+
+
+            <div class="footer-coluna footer-pagamentos">
+
+                <h4>
+                    Formas de Pagamento
+                </h4>
+
+                <div class="logos-pagamento">
+
+                    <img
+                        src="../img/logo-mastercard.png"
+                        alt="Mastercard"
+                    >
+
+                    <img
+                        src="../img/logo-boleto.png"
+                        alt="Boleto"
+                    >
+
+                    <img
+                        src="../img/logo-elo.png"
+                        alt="Elo"
+                    >
+
+                    <img
+                        src="../img/logo-pix.png"
+                        alt="Pix"
+                    >
+
+                    <img
+                        src="../img/logo-visa.png"
+                        alt="Visa"
+                    >
+
+                </div>
+
+
+                <h4>
+                    Selos de Segurança
+                </h4>
+
+                <div class="logos-seguranca">
+
+                    <img
+                        src="../img/google-site-seguro.png"
+                        alt="Google Site Seguro"
+                    >
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <hr class="footer-divisor">
+
+
+        <div class="footer-copy">
+
+            Latavola | CNPJ: 41.628.257/0002-00 ©
+            Direitos Reservados
+            www.latavola.com.br
+
+        </div>
+
+    </footer>
+
+
+    <script src="../JS/admin/admin-login.js"></script>
+
+</body>
+
+</html>

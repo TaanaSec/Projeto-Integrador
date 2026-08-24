@@ -22,7 +22,6 @@ exports.cadastro = async (req, res) => {
     try {
         const salt = await bcrypt.genSalt(12)
         const senhaHash = await bcrypt.hash(senha, salt)
-
         const novoLogin = new login({ nome, email, senha: senhaHash })
         await novoLogin.save()
 

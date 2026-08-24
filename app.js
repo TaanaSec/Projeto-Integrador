@@ -1,5 +1,6 @@
 const express = require('express')
 const cors = require('cors')
+const path = require('path');
 
 require("./config/db")
 
@@ -8,11 +9,14 @@ const adminRoutes = require('./routes/adminRoutes')
 const dashboardRoutes = require('./routes/dashboardRoutes')
 const relatoriosRoutes = require('./routes/relatoriosRoutes')
 const produtoRoutes = require('./routes/produtoRoutes')
+const administradoresRoutes = require('./routes/administradoresRoutes')
 
 const app = express()
 
 app.use(cors())
 app.use(express.json())
+
+app.use(express.static(path.join(__dirname)));
 
 const PORT = 3000
 
@@ -28,6 +32,7 @@ app.use('/api', adminRoutes)
 app.use("/api", dashboardRoutes)
 app.use("/api", relatoriosRoutes)
 app.use('/api', produtoRoutes)
+app.use('/api', administradoresRoutes)
 app.use('/uploads', express.static('uploads'))
 
 

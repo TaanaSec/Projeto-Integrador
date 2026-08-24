@@ -6,8 +6,8 @@ document.getElementById('btnSair')?.addEventListener('click', () => { // so faz 
         return
     }
 
-    sessionStorage.removeItem('token') // desfaz o token jwt
-    sessionStorage.removeItem('usuarioLogado') // remove os dados do user armazenado no browser
+    sessionStorage.removeItem('adminToken') // desfaz o token jwt
+    sessionStorage.removeItem('adminLogado') // remove os dados do user armazenado no browser
 
     window.location.href = '../../index.html' //tira o user do painel e manda pro index dnv
 })
