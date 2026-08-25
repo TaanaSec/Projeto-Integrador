@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Produtos</title>
+
+  <link rel="icon" href="/icon/logo-emporio.ico" type="image/ico">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+  <link rel="stylesheet" href="/CSS/restrict/restrict.css">
+  <link rel="stylesheet" href="/CSS/restrict/cadastrar-produto/cadastrar-produto.css">
+</head>
+
+<body>
+
+  <!-- ════════════════════════════════════════ HEADER ════════════════════════════════════════ -->
+  <header class="site-header">
+    <a href="/pages/restrito/restrict.html"><h1 class="header-title">Painel Empório</h1></a>
+
+    <div class="menu-container">
+      <button class="btn-hamburguer" id="btnHamburguer" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="menu-dropdown" id="menuDropdown">
+
+        <a href="/pages/restrito/dashboard.html" class="link-dashboard">
+            <img src="/img/icone-dashboard.png" alt="dashboard">
+            <span>Dashboard</span>
+        </a>
+
+        <a href="/pages/restrito/relatorios.html" class="link-relatorios">
+            <img src="/img/icone-relatorios.png" alt="relatorios">
+            <span>Relatórios</span>
+        </a>
+
+        <a href="/pages/restrito/cadastrar-produto.html" class="link-configuracoes">
+            <img src="/img/icone-produtos.png" alt="produtos">
+            <span>Produtos</span>
+        </a>
+        
+        <a href="/pages/restrito/estatisticas.html" class="link-estatisticas">
+            <img src="/img/icone-estatisticas.png" alt="estatisticas">
+            <span>Estatísticas</span>
+        </a>    
+        
+        <a href="/pages/restrito/usuarios.html" class="link-usuarios">
+            <img src="/img/icone-usuarios.png" alt="usuarios">
+            <span>Usuários</span>
+        </a>
+
+        <a href="/pages/restrito/configuracoes.html" class="link-configuracoes">
+            <img src="/img/icone-configuracoes.png" alt="Configurações">
+            <span>Configurações</span>
+        </a>
+
+
+        <hr>
+        
+        <button id="btnSair" type="button">
+          <img src="/img/icone-sair-logout.png" alt="Sair da Conta">
+          <span>Sair da Conta</span>
+        </button>
+        
+      </nav>
+    </div>
+
+    <div class="container-perfil">
+        <a class="link-perfil" href="/pages/perfil.html">
+          <img class="icone-perfil" src="/img/icone-login.png" alt="Área do Perfil"> <!--Fazer aparecer foto do perfil da pessoa-->
+          <span>Perfil</span>
+        </a>
+    </div>
+
+  </header>
+
+  <!-- ════════════════════════════════════════ MAIN ════════════════════════════════════════ -->
+  <main class="painel-produtos">
+
+    <section class="cabecalho-pagina">
+        <div>
+            <h1>Cadastro de Produtos</h1>
+
+            <p>Cadastre, consulte e exclua os produtos da loja.</p>
+        </div>
+
+        <button class="botao-criar" id="botaoMostrarFormulario" type="button">
+            + Cadastrar produto
+        </button>
+    </section>
+
+    <section class="resumo-produtos">
+        <div class="cartao-resumo">
+            <span class="titulo-resumo">Qtde. de Produtos</span>
+            <strong id="produtosAtivos">0</strong>
+        </div>
+
+        <div class="cartao-resumo">
+            <span class="titulo-resumo">Produtos Excluídos</span>
+            <strong id="produtosExcluidos">0</strong>
+        </div>
+    </section>
+
+
+
+    <section class="cabecalho-formulario" id="cabecalhoFormularioProduto" hidden>
+        <h2>Cadastrar produto</h2>
+        <p>Preencha os dados abaixo. Para vinho, informe também a vinícola e o ano.</p>
+    </section>
+
+    <section class="cartao-produto" id="areaFormularioProduto" hidden>
+        <form id="formularioProduto">
+            
+            <div class="campo">
+                <label for="nomeProduto">Nome do produto</label>
+                
+                <input 
+                    type="text" 
+                    name="nome"
+                    id="nomeProduto"
+                    placeholder="Ex.: Vinho Tinto Reserva"
+                    required
+                >
+            </div>
+
+            <div class="campo">
+                <label for="categoriaProduto">Categoria</label>
+
+                <select name="categoria" id="categoriaProduto" required>
+                    <option value="">Selecione uma opção</option>
+                    <option value="vinho">Vinho</option>
+                    <option value="geleia">Geleia</option>
+                    <option value="suco">Suco</option>
+                    <option value="queijo">Queijo</option>
+                </select>
+            </div>
+
+            <div class="linha-campos" id="camposVinho" hidden>
+                <div class="campo">
+                    <label for="vinicolaProduto">Vinícola</label>
+                    <input type="text" name="vinicola" id="vinicolaProduto" placeholder="Ex.: Santa Ema">
+                </div>
+
+                <div class="campo">
+                    <label for="anoProduto">Ano</label>
+                    <input type="number" name="ano" id="anoProduto" min="1900" max="2100" placeholder="Ex.: 2024">
+                </div>
+            </div>
+
+            <div class="linha-campos">
+                <div class="campo">
+                    <label for="precoProduto">Preço (R$)</label>
+                    <input type="number" name="preco" id="precoProduto" min="0.01" step="0.01" placeholder="0,00" required>
+                </div>
+
+                <div class="campo">
+                    <label for="estoqueProduto">Estoque</label>
+                    <input type="number" name="estoque" id="estoqueProduto" min="0" step="1" placeholder="0" required>
+                </div>
+            </div>
+
+            <div class="campo">
+                <label for="imagemProduto">Imagem do card</label>
+                <input type="file" name="imagem" id="imagemProduto" accept="image/*" required>
+                <small>Formatos de imagem aceitos. Tamanho máximo: 5 MB.</small>
+            </div>
+
+            <div class="botoes-produto">
+                <button class="botao-cancelar" id="botaoCancelarFormulario" type="button">
+                    Cancelar
+                </button>
+
+                <button class="botao-cadastrar" type="submit">Cadastrar Produto</button>
+            </div>
+
+        </form>
+
+    </section>
+
+    <section class="filtros-produtos">
+        <div class="campo-pesquisa">
+            <label for="pesquisaProduto">Buscar produto</label>
+            <input id="pesquisaProduto" type="search" placeholder="Digite o nome do produto">
+        </div>
+
+        <div class="campo-filtro">
+            <label for="filtroCategoria">Categoria</label>
+            <select id="filtroCategoria">
+                <option value="">Todas</option>
+                <option value="vinho">Vinhos</option>
+                <option value="geleia">Geleias</option>
+                <option value="suco">Sucos</option>
+                <option value="queijo">Queijos</option>
+            </select>
+        </div>
+    </section>
+
+    <section class="area-produtos">
+        <div class="titulo-secao">
+            <h2>Produtos cadastrados</h2>
+            <span id="qtdResultados">0 produtos</span>
+        </div>
+        <div class="lista-produtos" id="listaProdutos"></div>
+    </section>
+
+  </main>
+
+  <!-- ════════════════════════════════════════ FOOTER ════════════════════════════════════════ -->
+  <footer class="site-footer">
+    
+  </footer>
+
+  <script src="/JS/restrict/menuHamburguer.js"></script>
+  <script src="/JS/restrict/logout.js"></script>
+  <script src="/JS/admin/adminAuth.js"></script>
+  <script src="/JS/restrict/cadastrar-produto.js"></script>
+
+</body>
+</html>

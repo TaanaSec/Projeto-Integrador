@@ -38,11 +38,16 @@ main {
   gap: 24px;
 }
 
+.site-header a {
+  text-decoration: none;
+}
+
 .header-title {
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
   font-weight: 600;
   color: #000;
+  text-decoration: none;
   margin: 0;
 }
 
@@ -91,7 +96,7 @@ main {
 }
 
 .btn-hamburguer.ativo span:nth-child(3) {
-  transform: rotate(-45deg) translate(7px, -7px);
+  transform: rotate(-45deg) translate(2px, -2px);
 }
 
 /* ── MENU DROPDOWN ── */
@@ -117,20 +122,31 @@ main {
 
 .menu-dropdown a,
 .menu-dropdown button {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
   width: 100%;
   padding: 12px 16px;
+
   color: #7c6e52;
   text-decoration: none;
+
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
+
   background: none;
   border: none;
+
   text-align: left;
   cursor: pointer;
+
   transition: all 0.15s;
+
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
+
+
 
 .menu-dropdown a:last-child,
 .menu-dropdown button:last-child {
@@ -150,21 +166,13 @@ main {
   margin: 4px 0;
 }
 
-#btnSair, 
-#btnConfiguracoes {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-#btnSair img, 
-#btnConfiguracoes img {
+.menu-dropdown a img,
+.menu-dropdown button img {
   width: 18px;
   height: 18px;
   object-fit: contain;
+  flex-shrink: 0;
 }
-
-
 
 /* ── FOOTER ── */
 .site-footer {
@@ -196,3 +204,266 @@ main {
   object-fit: contain;
 }
 
+
+
+/* ── PAINEL ── */
+
+.painel {
+  padding: 32px 40px;
+}
+
+/* Para o painel administrativo */
+#painel-admin {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+
+/* ── INTRODUÇÃO ── */
+
+.introducao {
+  margin-bottom: 28px;
+}
+
+.introducao h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 6px;
+}
+
+.introducao p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: #7c6e52;
+  line-height: 1.6;
+}
+
+
+/* ── CARTÕES ── */
+
+.cartoes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.cartao {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  min-height: 110px;
+  padding: 20px;
+
+  background-color: #fff;
+
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+
+/* ── ÍCONE DO CARTÃO ── */
+
+.icone {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background-color: #f9f4f0;
+}
+
+.icone img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+
+/* ── INFORMAÇÕES DO CARTÃO ── */
+
+.informacao {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.informacao span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  color: #7c6e52;
+}
+
+.informacao strong {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #000;
+}
+
+
+/* ── CONTEÚDO ── */
+
+.conteudo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+
+/* ── SEÇÃO ── */
+
+.secao {
+  background-color: #fff;
+
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+
+  overflow: hidden;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+
+/* ── CABEÇALHO DA SEÇÃO ── */
+
+.cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 18px 20px;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.cabecalho h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+}
+
+.cabecalho span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  color: #7c6e52;
+}
+
+
+/* ── ATALHOS ── */
+
+.atalho {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 16px 20px;
+
+  text-decoration: none;
+  color: inherit;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+
+  transition: background-color 0.15s;
+}
+
+.atalho:last-child {
+  border-bottom: none;
+}
+
+.atalho:hover {
+  background-color: #f9f4f0;
+}
+
+.atalho > img {
+  width: 20px;
+  height: 20px;
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+}
+
+.atalho div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+
+  flex: 1;
+}
+
+.atalho strong {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #000;
+}
+
+.atalho div span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  color: #7c6e52;
+}
+
+.seta {
+  font-size: 18px;
+  color: #7c6e52;
+}
+
+
+/* ── ATIVIDADES ── */
+
+.atividade {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 16px 20px;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.atividade:last-child {
+  border-bottom: none;
+}
+
+.ponto {
+  width: 8px;
+  height: 8px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background-color: #a50000;
+}
+
+.atividade > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.atividade strong {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #000;
+}
+
+.atividade span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  color: #7c6e52;
+}
