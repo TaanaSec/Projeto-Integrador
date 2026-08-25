@@ -20,7 +20,7 @@
         <img class="header-logo" src="../img/logo-emporio.png" alt="Logo Empório La Tavola">
       </a>
 
-      <input class="barra-pesquisa" type="search" placeholder="Buscar produtos...">
+      <input id="buscaVinhos" class="barra-pesquisa" type="search" placeholder="Buscar produtos...">
 
       <div class="header-acoes">
         <a class="link-header" href="localizacao.html">
@@ -69,120 +69,121 @@
 
   <main class="pagina-conteudo">
 
-    <section id="secao-vinhos">
-      <div class="conteudo-vinhos">
-        <aside class="barra-filtros">
-          <div class="card-entrega">
-            <div class="cabecalho-entrega">
+    <section id="section-main">
+
+      <div class="container main-layout">
+        <aside class="sidebar">
+          <div class="delivery-box">
+            <div class="delivery-header">
               <img src="../img/icone-localizacao.png" alt="Location" />
               <span>Entregar em</span>
             </div>
-            <div class="campo-entrega">
+            <div class="delivery-input">
               <input type="text" placeholder="Informe seu cep" />
             </div>
           </div>
 
-          <div class="card-filtros">
-            <h2 class="titulo-filtros">Filtrar por</h2>
-            <div class="filtros-ativos">
-              <span class="filtro-ativo">Tinto X</span>
+          <div class="filter-box">
+            <h2 class="filter-title">Filtrar por</h2>
+            <div class="active-filters">
+              <span class="filter-tag">Tinto X</span>
             </div>
 
-            <div class="grupo-filtros">
-              <h3 class="titulo-grupo-filtros">Categoria</h3>
-              <label class="rotulo-checkbox">
+            <div class="filter-group">
+              <h3 class="filter-group-title">Categoria</h3>
+              <label class="checkbox-label">
                 <input type="checkbox" checked />
-                <span class="checkbox-personalizado"></span>
+                <span class="custom-checkbox"></span>
                 Bebidas
               </label>
-              <label class="rotulo-checkbox">
+              <label class="checkbox-label">
                 <input type="checkbox" />
-                <span class="checkbox-personalizado"></span>
+                <span class="custom-checkbox"></span>
                 Queijos
               </label>
-              <label class="rotulo-checkbox">
+              <label class="checkbox-label">
                 <input type="checkbox" />
-                <span class="checkbox-personalizado"></span>
+                <span class="custom-checkbox"></span>
                 Geleias
               </label>
-              <label class="rotulo-checkbox">
+              <label class="checkbox-label">
                 <input type="checkbox" />
-                <span class="checkbox-personalizado"></span>
+                <span class="custom-checkbox"></span>
                 Conservas
               </label>
-              <label class="rotulo-checkbox">
+              <label class="checkbox-label">
                 <input type="checkbox" />
-                <span class="checkbox-personalizado"></span>
+                <span class="custom-checkbox"></span>
                 Pães
               </label>
-              <label class="rotulo-checkbox">
+              <label class="checkbox-label">
                 <input type="checkbox" />
-                <span class="checkbox-personalizado"></span>
+                <span class="custom-checkbox"></span>
                 Grãos
               </label>
             </div>
 
-            <div class="grupo-filtros">
-              <h3 class="titulo-grupo-filtros">Subcategoria</h3>
-              <label class="rotulo-checkbox">
+            <div class="filter-group">
+              <h3 class="filter-group-title">Subcategoria</h3>
+              <label class="checkbox-label">
                 <input type="checkbox" checked />
-                <span class="checkbox-personalizado"></span>
+                <span class="custom-checkbox"></span>
                 Vinhos
               </label>
-              <label class="rotulo-checkbox">
+              <label class="checkbox-label">
                 <input type="checkbox" />
-                <span class="checkbox-personalizado"></span>
+                <span class="custom-checkbox"></span>
                 Sucos
               </label>
-              <label class="rotulo-checkbox">
+              <label class="checkbox-label">
                 <input type="checkbox" />
-                <span class="checkbox-personalizado"></span>
+                <span class="custom-checkbox"></span>
                 Gaseificados
               </label>
-              <label class="rotulo-checkbox">
+              <label class="checkbox-label">
                 <input type="checkbox" />
-                <span class="checkbox-personalizado"></span>
+                <span class="custom-checkbox"></span>
                 Destilados
               </label>
             </div>
 
-            <div class="grupo-filtros">
-              <h3 class="titulo-grupo-filtros">Tipo de vinho</h3>
-              <label class="rotulo-checkbox">
+            <div class="filter-group">
+              <h3 class="filter-group-title">Tipo de vinho</h3>
+              <label class="checkbox-label">
                 <input type="checkbox" />
-                <span class="checkbox-personalizado estilo-radio"></span>
+                <span class="custom-checkbox radio-style"></span>
                 Branco
               </label>
-              <label class="rotulo-checkbox">
+              <label class="checkbox-label">
                 <input type="checkbox" />
-                <span class="checkbox-personalizado estilo-radio"></span>
+                <span class="custom-checkbox radio-style"></span>
                 Moscatel
               </label>
-              <label class="rotulo-checkbox">
+              <label class="checkbox-label">
                 <input type="checkbox" />
-                <span class="checkbox-personalizado estilo-radio"></span>
+                <span class="custom-checkbox radio-style"></span>
                 Porto
               </label>
-              <label class="rotulo-checkbox">
+              <label class="checkbox-label">
                 <input type="checkbox" />
-                <span class="checkbox-personalizado estilo-radio"></span>
+                <span class="custom-checkbox radio-style"></span>
                 Rosé
               </label>
-              <label class="rotulo-checkbox">
+              <label class="checkbox-label">
                 <input type="checkbox" checked />
-                <span class="checkbox-personalizado estilo-radio"></span>
+                <span class="custom-checkbox radio-style"></span>
                 Tinto
               </label>
             </div>
 
-            <div class="grupo-filtros">
-              <h3 class="titulo-grupo-filtros">Faixas de preço</h3>
-              <div class="faixa-preco">
-                <div class="trilho-faixa"></div>
-                <div class="controle-faixa esquerda"></div>
-                <div class="controle-faixa direita"></div>
+            <div class="filter-group">
+              <h3 class="filter-group-title">Faixas de preço</h3>
+              <div class="price-range">
+                <div class="range-track"></div>
+                <div class="range-handle left"></div>
+                <div class="range-handle right"></div>
               </div>
-              <div class="valores-faixa">
+              <div class="price-labels">
                 <span>R$7,00</span>
                 <span>R$900,00</span>
               </div>
@@ -190,203 +191,24 @@
           </div>
         </aside>
 
-        <main class="area-produtos">
-          <div class="caminho-navegacao">Início | Bebidas | Vinhos | Tinto</div>
+        <main class="product-area">
+          <div class="breadcrumbs">Início | Bebidas | Vinhos | Tinto</div>
 
-          <div class="cabecalho-produtos">
-            <h1 class="titulo-pagina">Todos os vinhos tintos (263 produtos)</h1>
-            <div class="seletor-ordenacao">
-              <span class="rotulo-ordenacao">Ordenar por:</span>
-              <span class="valor-ordenacao">Relevância</span>
+          <div class="product-header">
+            <h1 id="tituloVinhos" class="page-title">Todos os vinhos disponíveis</h1>
+            <div class="sort-dropdown">
+              <span class="sort-label">Ordenar por:</span>
+              <span class="sort-value">Relevância</span>
               <img src="../img/icones/seta_baixo.png" alt="Arrow Down" />
             </div>
           </div>
 
-          <div class="lista-produtos">
-            <!-- Row 1 -->
-            <div class="card-produto">
-              <div class="produto-imagem-area">
-                <img src="../img/vinhos/Vinho_5.png" alt="Vinho Côtto Duro" />
-              </div>
-              <div class="produto-info">
-                <h3 class="produto-nome">Vinho Côtto Duro - 750ml</h3>
-                <p class="produto-preco">R$99,80</p>
-              </div>
-              <button class="btn-comprar">COMPRAR</button>
-            </div>
-            <div class="card-produto">
-              <div class="produto-imagem-area">
-                <img src="../img/vinhos/Vinho_8.png" alt="Vinho Chianti Clássico" />
-              </div>
-              <div class="produto-info">
-                <h3 class="produto-nome">Vinho Chianti Clássico - 750ml</h3>
-                <p class="produto-preco">R$134,80</p>
-              </div>
-              <button class="btn-comprar">COMPRAR</button>
-            </div>
-            <div class="card-produto">
-              <div class="produto-imagem-area">
-                <img src="../img/vinhos/Vinho_7.png" alt="Vinho Le Petit Courret" />
-              </div>
-              <div class="produto-info">
-                <h3 class="produto-nome">Vinho Le Petit Courret - 750ml</h3>
-                <p class="produto-preco">R$87,00</p>
-              </div>
-              <button class="btn-comprar">COMPRAR</button>
-            </div>
-            <div class="card-produto">
-              <div class="produto-imagem-area">
-                <img src="../img/vinhos/Vinho_13.png" alt="Vinho Madai Thera" />
-              </div>
-              <div class="produto-info">
-                <h3 class="produto-nome">Vinho Madai Thera - 750ml</h3>
-                <p class="produto-preco">R$196,00</p>
-              </div>
-              <button class="btn-comprar">COMPRAR</button>
-            </div>
+          <div id="listaVinhos" class="product-grid" aria-live="polite"></div>
 
-            <!-- Row 2 -->
-            <div class="card-produto">
-              <div class="produto-imagem-area">
-                <img src="../img/vinhos/Vinho_19.png" alt="Vinho UVVA Cordel" />
-              </div>
-              <div class="produto-info">
-                <h3 class="produto-nome">Vinho UVVA Cordel - 750ml</h3>
-                <p class="produto-preco">R$460,00</p>
-              </div>
-              <button class="btn-comprar">COMPRAR</button>
-            </div>
-            <div class="card-produto">
-              <div class="produto-imagem-area">
-                <img src="../img/vinhos/Vinho_18.png" alt="Vinho Shiraz Wakefield" />
-              </div>
-              <div class="produto-info">
-                <h3 class="produto-nome">Vinho Shiraz Wakefield - 750ml</h3>
-                <p class="produto-preco">R$205,00</p>
-              </div>
-              <button class="btn-comprar">COMPRAR</button>
-            </div>
-            <div class="card-produto">
-              <div class="produto-imagem-area">
-                <img src="../img/vinhos/Vinho_20.png" alt="Vinho Le Petit Ducru" />
-              </div>
-              <div class="produto-info">
-                <h3 class="produto-nome">Vinho Le Petit Ducru - 750ml</h3>
-                <p class="produto-preco">R$606,00</p>
-              </div>
-              <button class="btn-comprar">COMPRAR</button>
-            </div>
-            <div class="card-produto">
-              <div class="produto-imagem-area">
-                <img src="../img/vinhos/Vinho_12.png" alt="Vinho Badaresco" />
-              </div>
-              <div class="produto-info">
-                <h3 class="produto-nome">Vinho Badaresco - 750ml</h3>
-                <p class="produto-preco">R$830,00</p>
-              </div>
-              <button class="btn-comprar">COMPRAR</button>
-            </div>
-
-            <!-- Row 3 -->
-            <div class="card-produto">
-              <div class="produto-imagem-area">
-                <img src="../img/vinhos/Vinho_21.png" alt="Vinho Il Pino di Biserno" />
-              </div>
-              <div class="produto-info">
-                <h3 class="produto-nome">Vinho Il Pino di Biserno - 750ml</h3>
-                <p class="produto-preco">R$768,00</p>
-              </div>
-              <button class="btn-comprar">COMPRAR</button>
-            </div>
-            <div class="card-produto">
-              <div class="produto-imagem-area">
-                <img src="../img/vinhos/Vinho_22.png" alt="Vinho Mil Volcanes" />
-              </div>
-              <div class="produto-info">
-                <h3 class="produto-nome">Vinho Mil Volcanes - 750ml</h3>
-                <p class="produto-preco">R$99,00</p>
-              </div>
-              <button class="btn-comprar">COMPRAR</button>
-            </div>
-            <div class="card-produto">
-              <div class="produto-imagem-area">
-                <img src="../img/vinhos/Vinho_23.png" alt="Vinho Piattelli Reserva" />
-              </div>
-              <div class="produto-info">
-                <h3 class="produto-nome">Vinho Piattelli Reserva - 750ml</h3>
-                <p class="produto-preco">R$169,00</p>
-              </div>
-              <button class="btn-comprar">COMPRAR</button>
-            </div>
-            <div class="card-produto">
-              <div class="produto-imagem-area">
-                <img src="../img/vinhos/Vinho_24.png" alt="Vinho Santa Ema" />
-              </div>
-              <div class="produto-info">
-                <h3 class="produto-nome">Vinho Santa Ema - 750ml</h3>
-                <p class="produto-preco">R$159,00</p>
-              </div>
-              <button class="btn-comprar">COMPRAR</button>
-            </div>
-
-            <!-- Row 4 -->
-            <div class="card-produto">
-              <div class="produto-imagem-area">
-                <img src="../img/vinhos/Vinho_5.png" alt="Vinho Côtto Duro" />
-              </div>
-              <div class="produto-info">
-                <h3 class="produto-nome">Vinho Côtto Duro - 750ml</h3>
-                <p class="produto-preco">R$99,80</p>
-              </div>
-              <button class="btn-comprar">COMPRAR</button>
-            </div>
-            <div class="card-produto">
-              <div class="produto-imagem-area">
-                <img src="../img/vinhos/Vinho_8.png" alt="Vinho Chianti Clássico" />
-              </div>
-              <div class="produto-info">
-                <h3 class="produto-nome">Vinho Chianti Clássico - 750ml</h3>
-                <p class="produto-preco">R$134,80</p>
-              </div>
-              <button class="btn-comprar">COMPRAR</button>
-            </div>
-            <div class="card-produto">
-              <div class="produto-imagem-area">
-                <img src="../img/vinhos/Vinho_7.png" alt="Vinho Le Petit Courret" />
-              </div>
-              <div class="produto-info">
-                <h3 class="produto-nome">Vinho Le Petit Courret - 750ml</h3>
-                <p class="produto-preco">R$87,00</p>
-              </div>
-              <button class="btn-comprar">COMPRAR</button>
-            </div>
-            <div class="card-produto">
-              <div class="produto-imagem-area">
-                <img src="../img/vinhos/Vinho_6.png" alt="Vinho Madai Thera" />
-              </div>
-              <div class="produto-info">
-                <h3 class="produto-nome">Vinho Madai Thera - 750ml</h3>
-                <p class="produto-preco">R$196,00</p>
-              </div>
-              <button class="btn-comprar">COMPRAR</button>
-            </div>
-          </div>
-
-          <div class="paginacao">
-            <button class="seta-paginacao anterior">
-              <img src="../img/icones/seta_esquerda.png" alt="Prev" />
-            </button>
-            <button class="numero-pagina ativo">1</button>
-            <button class="numero-pagina">2</button>
-            <button class="numero-pagina">3</button>
-            <button class="numero-pagina">4</button>
-            <button class="numero-pagina">5</button>
-            <button class="seta-paginacao proximo">
-              <img src="../img/icones/seta_direita.png" alt="Next" />
-            </button>
-          </div>
+          <nav id="paginacaoVinhos" class="pagination" aria-label="Paginação dos vinhos"></nav>
         </main>
       </div>
+      
     </section>
 
   </main>
@@ -463,7 +285,7 @@
   </footer>
 
 
-  <script src="../JS/vinhos/vinhos.js"></script>
+  <script src="../JS/produtos/vinhos.js"></script>
   <script src="../JS/geral.js"></script>
 
 

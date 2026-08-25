@@ -31,33 +31,30 @@ input {
   outline: none;
 }
 
-#secao-vinhos {
+#section-main {
   padding: 40px 0 100px;
 }
-
-.conteudo-vinhos {
+.main-layout {
   display: flex;
   gap: 40px;
   padding: 0 200px;
 }
 
-/* BARRA DE FILTROS */
-.barra-filtros {
+/* Sidebar Styles */
+.sidebar {
   width: 371px;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-
-.card-entrega {
+.delivery-box {
   background: #ffffff;
   border: 1px solid #7c6e52;
   border-radius: 12px;
   padding: 20px;
 }
-
-.cabecalho-entrega {
+.delivery-header {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -65,8 +62,7 @@ input {
   font-size: 16px;
   margin-bottom: 15px;
 }
-
-.campo-entrega input {
+.delivery-input input {
   width: 100%;
   height: 29px;
   border: 1px solid #7c6e52;
@@ -75,24 +71,20 @@ input {
   color: rgba(124, 110, 82, 0.5);
 }
 
-
-.card-filtros {
+.filter-box {
   background-color: #f4e2e2;
   border-radius: 12px;
   padding: 25px;
 }
-
-.titulo-filtros {
+.filter-title {
   font-size: 18px;
   color: #403838;
   margin: 0 0 15px 0;
 }
-
-.filtros-ativos {
+.active-filters {
   margin-bottom: 20px;
 }
-
-.filtro-ativo {
+.filter-tag {
   display: inline-block;
   background-color: #d9d9d9;
   border: 1px solid #892e2e;
@@ -101,20 +93,17 @@ input {
   color: #5d0000;
   font-size: 12px;
 }
-
-.grupo-filtros {
+.filter-group {
   margin-bottom: 25px;
   border-top: 1px solid #403838;
   padding-top: 15px;
 }
-
-.titulo-grupo-filtros {
+.filter-group-title {
   font-size: 16px;
   color: #403838;
   margin: 0 0 15px 0;
 }
-
-.rotulo-checkbox {
+.checkbox-label {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -123,35 +112,29 @@ input {
   font-size: 14px;
   color: #403838;
 }
-
-.rotulo-checkbox input {
+.checkbox-label input {
   display: none;
 }
-
-.checkbox-personalizado {
+.custom-checkbox {
   width: 16px;
   height: 16px;
   background-color: #d9d9d9;
   border-radius: 2px;
   display: inline-block;
 }
-
-.rotulo-checkbox input:checked + .checkbox-personalizado {
+.checkbox-label input:checked + .custom-checkbox {
   background-color: #875a5a;
 }
-
-.checkbox-personalizado.estilo-radio {
+.custom-checkbox.radio-style {
   border-radius: 50%;
 }
 
-
-.faixa-preco {
+.price-range {
   position: relative;
   height: 20px;
   margin-top: 10px;
 }
-
-.trilho-faixa {
+.range-track {
   position: absolute;
   top: 50%;
   left: 0;
@@ -160,8 +143,7 @@ input {
   background-color: #892e2e;
   transform: translateY(-50%);
 }
-
-.controle-faixa {
+.range-handle {
   position: absolute;
   top: 50%;
   width: 11px;
@@ -170,16 +152,13 @@ input {
   border-radius: 50%;
   transform: translate(-50%, -50%);
 }
-
-.controle-faixa.esquerda {
+.range-handle.left {
   left: 10%;
 }
-
-.controle-faixa.direita {
+.range-handle.right {
   left: 90%;
 }
-
-.valores-faixa {
+.price-labels {
   display: flex;
   justify-content: space-between;
   font-size: 14px;
@@ -188,30 +167,26 @@ input {
 }
 
 /* Product Area Styles */
-.area-produtos {
+.product-area {
   flex: 1;
 }
-
-.caminho-navegacao {
+.breadcrumbs {
   font-size: 14px;
   color: #403838;
   margin-bottom: 20px;
 }
-
-.cabecalho-produtos {
+.product-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
 }
-
-.titulo-pagina {
+.page-title {
   font-size: 24px;
   color: #403838;
   margin: 0;
 }
-
-.seletor-ordenacao {
+.sort-dropdown {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -221,26 +196,22 @@ input {
   padding: 10px 20px;
   cursor: pointer;
 }
-
-.rotulo-ordenacao {
+.sort-label {
   color: #7c6e52;
   font-size: 14px;
 }
-
-.valor-ordenacao {
+.sort-value {
   color: #403838;
   font-size: 14px;
 }
 
-
-.lista-produtos {
+.product-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
   margin-bottom: 50px;
 }
-
-.card-produto {
+.product-card {
   background: #ffffff;
   border-radius: 12px;
   box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.1);
@@ -249,45 +220,52 @@ input {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
-
-.produto-imagem-area {
+.product-card:hover,
+.product-card:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.14);
+  outline: none;
+}
+.product-image {
   height: 220px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 15px;
 }
-
-.produto-imagem-area img {
+.product-image img {
   max-height: 100%;
   max-width: 100%;
   object-fit: contain;
 }
-
-.produto-info {
+.product-info {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   margin-bottom: 15px;
 }
-
-.produto-nome {
+.product-title {
   font-size: 14px;
   color: #403838;
   margin: 0 0 5px 0;
   line-height: 1.4;
 }
-
-.produto-preco {
+.product-meta {
+  display: inline;
+  color: #7c6e52;
+  font-weight: 500;
+}
+.product-price {
   font-size: 16px;
   font-weight: bold;
   color: #403838;
   margin: 0;
 }
-
-.btn-comprar {
+.btn-buy {
   background-color: #5d0000;
   color: #ffffff;
   border-radius: 7px;
@@ -297,21 +275,18 @@ input {
   font-weight: bold;
   transition: background-color 0.2s;
 }
-
-.btn-comprar:hover {
+.btn-buy:hover {
   background-color: #400101;
 }
 
-
 /* Pagination */
-.paginacao {
+.pagination {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
 }
-
-.numero-pagina {
+.page-num {
   width: 50px;
   height: 50px;
   border-radius: 8px;
@@ -323,54 +298,66 @@ input {
   align-items: center;
   justify-content: center;
 }
-
-.numero-pagina.ativo {
+.page-num.active {
   background-color: #c59898;
 }
-
-.seta-paginacao {
+.page-arrow {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 10px;
 }
+.page-num:disabled,
+.page-arrow:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+.pagina-reticencias {
+  color: #7c6e52;
+  padding: 0 3px;
+}
+.mensagem-catalogo {
+  grid-column: 1 / -1;
+  padding: 35px 20px;
+  border-radius: 12px;
+  background: #fff;
+  color: #403838;
+  text-align: center;
+}
 
 /* Responsive adjustments */
 @media (max-width: 1600px) {
-  .conteudo-vinhos {
+  .main-layout {
     padding: 0 50px;
   }
 }
-
 @media (max-width: 1200px) {
-  .lista-produtos {
+  .product-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-
 @media (max-width: 992px) {
-  .conteudo-vinhos {
+  .main-layout {
     flex-direction: column;
   }
-  .barra-filtros {
+  .sidebar {
     width: 100%;
   }
-  .lista-produtos {
+  .product-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
 @media (max-width: 576px) {
-  .lista-produtos {
+  .product-grid {
     grid-template-columns: 1fr;
   }
-
-  .cabecalho-produtos {
+  .product-header {
     flex-direction: column;
     align-items: flex-start;
     gap: 15px;
   }
 }
+
 
 @media (max-width: 768px) {
   .pagina-conteudo { padding: 24px 16px; }

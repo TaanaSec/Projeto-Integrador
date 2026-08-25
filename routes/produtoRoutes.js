@@ -39,6 +39,42 @@ router.get('/produtos', async (req, res) => {
     }
 });
 
+
+// Catálogo público: retorna somente os vinhos que o cliente pode comprar.
+router.get('/produtos/vinhos', async (req, res) => {
+    try {
+        const paginaInformada = Number.parseInt(req.query.pagina, 10);
+        const pagina = Number.isInteger(paginaInformada) && paginaInformada > 0 ? paginaInformada : 1;
+        const limite = 16;
+        const busca = String(req.query.busca || '').trim();
+
+        const filtro = {
+            categoria: 'vinho',
+            status: { $ne: 'excluido' },
+            estoque: { $gt: 0 }
+        };
+
+        if (busca) {
+            const buscaSegura = busca.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            filtro.nome = { $regex: buscaSegura, $options: 'i' };
+        }
+
+        const total = await Vinho.countDocuments(filtro);
+        const totalPaginas = Math.max(1, Math.ceil(total / limite));
+        const paginaAtual = Math.min(pagina, totalPaginas);
+        const produtos = await Vinho.find(filtro)
+            .sort({ createdAt: -1 })
+            .skip((paginaAtual - 1) * limite)
+            .limit(limite)
+            .lean();
+
+        res.status(200).json({ produtos, total, pagina: paginaAtual, totalPaginas });
+    } catch (erro) {
+        console.error(erro);
+        res.status(500).json({ erro: 'Erro ao buscar os vinhos disponíveis.' });
+    }
+});
+
 router.post('/produtos', upload.single('imagem'), async (req, res) => {
     try {
         const { nome, categoria, vinicola, ano, preco, estoque } = req.body;
