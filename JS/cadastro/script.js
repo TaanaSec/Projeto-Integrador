@@ -15,7 +15,7 @@ document.getElementById('formCadastro')?.addEventListener('submit', async (event
 
     // Verifica se a senha possui, no mínimo, um de cada: caractere minúsculo, maiúsculo, especial, numérico e 8 caracteres 
     function verificarSenha(senha) {
-        const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/
+        const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z\d]).{8,}$/;
         return regex.test(senha)
     }
 
