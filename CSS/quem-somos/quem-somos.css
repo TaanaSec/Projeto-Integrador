@@ -1,0 +1,107 @@
+@import url("../Global/global.css");
+
+/* Página Política de Privacidade */
+
+/* ── CONTEÚDO DA PÁGINA ── */
+.pagina-conteudo {
+  background: #f8f6f4;
+  padding: 40px 20px 60px;
+  min-height: 60vh;
+}
+
+.pagina-quemSomos {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 40px 50px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #ece7e2;
+}
+
+.pagina-quemSomos h2 {
+  font-size: 2rem;
+  color: #6b1f29;
+  margin-bottom: 25px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e6dfd8;
+}
+
+.pagina-quemSomos h3 {
+  font-size: 1.4rem;
+  color: #6b1f29;
+  margin-top: 35px;
+  margin-bottom: 15px;
+}
+
+.pagina-quemSomos p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 16px;
+  text-align: justify;
+}
+
+.pagina-quemSomos ul {
+  margin: 15px 0 25px 25px;
+  padding: 0;
+}
+
+.pagina-quemSomos li {
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+.pagina-quemSomos a {
+  color: #6b1f29;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.pagina-quemSomos a:hover {
+  color: #8f2d3b;
+  text-decoration: underline;
+}
+
+/* Destaque para a data final */
+.pagina-quemSomos p:last-child {
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid #e6dfd8;
+  font-size: 0.95rem;
+  color: #777;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .pagina-conteudo {
+      padding: 20px 15px 40px;
+  }
+
+  .pagina-quemSomos {
+      padding: 25px;
+  }
+
+  .pagina-quemSomos h2 {
+      font-size: 1.7rem;
+  }
+
+  .pagina-quemSomos h3 {
+      font-size: 1.2rem;
+  }
+
+  .pagina-quemSomos p,
+  .pagina-quemSomos li {
+      font-size: 0.95rem;
+  }
+}
+
+.pagina-conteudo {
+  padding: 40px;
+}
+
+@media (max-width: 768px) {
+  .pagina-conteudo { padding: 24px 16px; }
+}
