@@ -55,7 +55,7 @@ main {
   left: 50%;
   transform: translateX(-50%);
   max-width: 600px;
-  min-width: 35%;
+  min-width: 40%;
   height: 40px;
   border: none;
   border-radius: 10px;
@@ -352,7 +352,7 @@ main {
 }
 
 /* ── RESPONSIVO ── */
-@media (max-width: 1085px) {
+@media (max-width: 1175px) {
     .barra-pesquisa {
     position: inherit;
     order: 3;
