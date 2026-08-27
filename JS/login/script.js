@@ -5,6 +5,18 @@ function mostrarMensagem(texto, tipo = 'erro') {
     el.className = `mensagem ${tipo}`
 }
 
+function obterDestinoPosLogin() {
+    const destino = new URLSearchParams(window.location.search).get('redirect');
+    if (destino && /^(produto\.html\?id=[^&]+|carrinho\.html)$/.test(destino)) return destino;
+    return '../index.html';
+}
+
+const destinoPosLogin = obterDestinoPosLogin();
+const linkCadastro = document.querySelector('.link-cadastro a');
+if (linkCadastro && destinoPosLogin !== '../index.html') {
+    linkCadastro.href = `cadastro.html?redirect=${encodeURIComponent(destinoPosLogin)}`;
+}
+
 document.getElementById('formLogin')?.addEventListener('submit', async (event) => {
     event.preventDefault()
     
@@ -43,7 +55,7 @@ document.getElementById('formLogin')?.addEventListener('submit', async (event) =
         )
 
         mostrarMensagem('Login realizado! Redirecionando...', 'sucesso')
-        setTimeout(() => {window.location.href = '../index.html'}, 1500)
+        setTimeout(() => { window.location.href = destinoPosLogin }, 1500)
         
     } catch (error) {
         console.error(error)

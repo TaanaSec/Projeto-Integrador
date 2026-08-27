@@ -5,6 +5,18 @@ function mostrarMensagem(texto, tipo = 'erro') {
     el.className = `mensagem ${tipo}`
 }
 
+function obterDestinoPosCadastro() {
+    const destino = new URLSearchParams(window.location.search).get('redirect');
+    if (destino && /^(produto\.html\?id=[^&]+|carrinho\.html)$/.test(destino)) return destino;
+    return '../index.html';
+}
+
+const destinoPosCadastro = obterDestinoPosCadastro();
+const linkLogin = document.querySelector('.link-login a');
+if (linkLogin && destinoPosCadastro !== '../index.html') {
+    linkLogin.href = `login.html?redirect=${encodeURIComponent(destinoPosCadastro)}`;
+}
+
 document.getElementById('formCadastro')?.addEventListener('submit', async (event) => {
     event.preventDefault()
 
@@ -78,7 +90,7 @@ document.getElementById('formCadastro')?.addEventListener('submit', async (event
 
         if (response.ok) {
             mostrarMensagem("Cadastro realizado! Redirecionando...", "sucesso")
-            setTimeout(() => window.location.href = '../index.html', 1500)
+            setTimeout(() => window.location.href = destinoPosCadastro, 1500)
         }
 
     } catch (error) {
