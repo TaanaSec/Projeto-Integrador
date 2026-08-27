@@ -77,7 +77,22 @@
 
   <!--________________________________________________ Começo do Main ________________________________________________ -->
   <main class="pagina-conteudo"><!--________ Conteudo da Pagina Carrinho ________ -->
-    <!-- Conteúdo de Carrinho de Compras -->
+    <section class="carrinho-container" aria-labelledby="tituloCarrinho">
+      <div class="carrinho-cabecalho">
+        <p class="carrinho-subtitulo">Revise os itens antes de finalizar seu pedido.</p>
+        <h1 id="tituloCarrinho">Meu Carrinho</h1>
+      </div>
+      <div class="carrinho-layout">
+        <div id="itensCarrinho" class="lista-carrinho" aria-live="polite"></div>
+        <aside class="resumo-pedido" aria-labelledby="tituloResumo">
+          <h2 id="tituloResumo">Resumo do pedido</h2>
+          <div class="linha-resumo"><span>Subtotal</span><strong id="subtotalCarrinho">R$ 0,00</strong></div>
+          <div class="linha-resumo frete"><span>Frete</span><span>Calcule no próximo passo</span></div>
+          <div class="linha-total"><span>Total</span><strong id="totalCarrinho">R$ 0,00</strong></div>
+          <button class="btn-finalizar" type="button">FINALIZAR COMPRA</button>
+        </aside>
+      </div>
+    </section>
   </main>
   <!--________________________________________________ Fim do Main ________________________________________________ -->
 
