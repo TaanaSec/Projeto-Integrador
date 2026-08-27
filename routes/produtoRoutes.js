@@ -75,6 +75,26 @@ router.get('/produtos/vinhos', async (req, res) => {
     }
 });
 
+// Detalhe público de um vinho disponível no catálogo.
+router.get('/produtos/:id', async (req, res) => {
+    try {
+        const produto = await Vinho.findOne({
+            _id: req.params.id,
+            categoria: 'vinho',
+            status: { $ne: 'excluido' },
+            estoque: { $gt: 0 }
+        }).lean();
+
+        if (!produto) {
+            return res.status(404).json({ erro: 'Produto não encontrado ou indisponível.' });
+        }
+
+        res.status(200).json(produto);
+    } catch (erro) {
+        res.status(400).json({ erro: 'Identificador de produto inválido.' });
+    }
+});
+
 router.post('/produtos', upload.single('imagem'), async (req, res) => {
     try {
         const { nome, categoria, vinicola, ano, preco, estoque } = req.body;
