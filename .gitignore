@@ -80,4 +80,4 @@ web_modules/
 .vscode-test
 
 # Outras pastas
-uploads/
+# uploads/
